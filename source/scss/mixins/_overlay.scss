@@ -1,0 +1,28 @@
+@mixin overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 20;
+  background-color: transparent;
+  visibility: hidden;
+  opacity: 0;
+  height: -webkit-fill-available;
+
+  transition: opacity 0.5s ease;
+  padding: 20px 20px;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  &.active {
+    background-color: rgba(0, 0, 0, 0.564);
+    visibility: visible;
+    opacity: 1;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+  }
+}
