@@ -18,10 +18,10 @@
 
   // text color
   --color-a: #ffffff; // var(--color-a);
-  // --color-b: #000000; // var(--color-b);
-  // --color-с: #BD9B60; // var(--color-с);
-  // --color-d: #F8F8F6; // var(--color-d);
-  // --color-e: #fffbfb; // var(--color-e);
+  --color-b: #000000; // var(--color-b);
+  --color-с: #5FD6FF; // var(--color-с);
+  --color-d: #8247E5; // var(--color-d);
+  --color-e: #BE97FF; // var(--color-e);
   // --color-f: #004976; // var(--color-f);
   // --color-g: #c4c4c4; // var(--color-g);
   // --color-h: #000D28; // var(--color-h);
@@ -30,14 +30,19 @@
 
    // bg color
   --bg-a: #ffffff; // var(--bg-a);
-  // --bg-b: #000000; // var(--bg-b);
-  // --bg-c: #00496D; // var(--bg-c);
-  // --bg-d: #EAEAEA; // var(--bg-d);
-  // --bg-e: #C6A978; // var(--bg-e);
+  --bg-b: #000000; // var(--bg-b);
+  --bg-c: #5FD6FF; // var(--bg-c);
+  --bg-d: #8247E5; // var(--bg-d);
+  --bg-e: #BE97FF; // var(--bg-e);
   // --bg-f: #E0C087; // var(--bg-f);
   // --bg-g: #004976; // var(--bg-g);
   // --bg-h: #E5EDF1; // var(--bg-h);
   // --bg-i: #EBEBEB; // var(--bg-i);
 
+
+  --logo-gradient:
+  linear-gradient(180deg, #8247E5 0%, rgba(130, 71, 229, 0) 100%);
+
+  --invest-now :linear-gradient(180deg, #8247E5 0%, rgba(130, 71, 229, 0) 100%);
 
 }

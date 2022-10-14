@@ -1,0 +1,36 @@
+header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  left: 0;
+  padding: clamp(20px, 2.222vw, 26px) 0;
+
+  &::before {
+    width: 400px;
+    height: 100px;
+    border-radius: 50%;
+    content: '';
+    background: var(--bg-d);
+    filter: blur(Min(10.94vw, 100px));
+    position: absolute;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: -1;
+    border-radius:0 0 50% 50% ;
+    left: 50%;
+    transform: translateX(-55%);
+    top: 0px;
+  }
+
+  @include for-laptop {
+    left: 30px;
+  }
+}
+
+.header {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  grid-gap: 30px;
+
+}

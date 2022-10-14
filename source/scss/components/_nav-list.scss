@@ -1,0 +1,30 @@
+.nav-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  grid-gap: 20px 0;
+
+  &__link {
+    font-family: var(--font-family);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 14px;
+    color: var(--color-a);
+    display: flex;
+    align-items: center;
+    grid-gap: 8px;
+
+    &--telegram {
+      color: var(--color-с);
+      svg {
+        flex-grow: 0;
+        background: linear-gradient(180deg, #41BCE7 0%, #22A6DC 99.64%);
+        border-radius: 50%;
+      }
+    }
+  }
+
+
+}

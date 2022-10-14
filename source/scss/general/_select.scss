@@ -1,6 +1,6 @@
 .select {
   position: relative;
-  width: 100%;
+  // width: 100%;
 }
 
 .select.active .select__body {
@@ -23,19 +23,13 @@
 
 .select__header {
   display: grid;
-  grid-template-columns: 1fr 10px;
-  grid-gap: 10px;
   align-items: center;
   // min-width: 130px;
-  height: 42px;
-  width: 100%;
-  padding: 0 18px;
+  width: fit-content;
+  max-width: 100%;
   cursor: pointer;
-
   grid-gap: 8px;
 
-  background: #E5EDF1;
-  border-radius: 30px;
 }
 
 .select__current {

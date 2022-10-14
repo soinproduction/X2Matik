@@ -1,0 +1,29 @@
+.footer {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  grid-gap: 30px;
+  padding: clamp(20px, 2.222vw, 26px) 0;
+
+  &::before {
+    width: 500px;
+    height: 80px;
+    border-radius: 50%;
+    content: '';
+    background: var(--bg-d);
+    filter: blur(Min(10.94vw, 128px));
+    position: absolute;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: -1;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    border-radius: 50% 50% 0 0;
+  }
+
+  @include for-laptop {
+    left: 30px;
+  }
+}

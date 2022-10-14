@@ -1,0 +1,48 @@
+.investments-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.investments-now {
+  border-radius: clamp(18px, 1.709vw, 20px);
+  padding: 34px 20px;
+  background: var(--invest-now);
+
+  &__descr {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 10px;
+    // max-width: 160px;
+    font-weight: 800;
+    font-size: 65px;
+    line-height: 65px;
+    font-family: var(--font-family);
+    font-style: normal;
+
+    text-transform: uppercase;
+    color: var(--color-a);
+
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+    span {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 16px;
+    }
+
+    b {
+      display: inline;
+    }
+  }
+
+  &__top {
+    position: relative;
+  }
+
+  &__image {
+    position: absolute;
+    top: 0;
+    right: -10px;
+  }
+
+}
