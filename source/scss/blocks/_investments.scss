@@ -1,5 +1,22 @@
 .investments {
-  padding-top: 32px;
+  padding: 32px 0 clamp(40px, 6.41vw, 75px);
+  position: relative;
+
+  &::after {
+    @include round;
+    top: 50%;
+    left: calc((452px - 84px) * -1);
+    transform: translateY(-50%);
+    z-index: -2;
+  }
+  &::before {
+    @include round;
+    top: 50%;
+    right: calc((452px - 84px) * -1);
+    transform: translateY(-50%);
+    z-index: -2;
+  }
+
 
   &__top {
     margin-bottom: clamp(30px, 4.701vw, 55px);

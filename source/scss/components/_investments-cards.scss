@@ -1,12 +1,30 @@
 .investments-cards {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4,1fr);
+  align-items: stretch;
+  grid-gap: 30px Min(1.709vw, 20px);
+
+  @include tablet {
+    grid-template-columns: repeat(2,1fr);
+    max-width: 767px;
+    margin: 0 auto;
+    grid-gap: 30px 20px;
+  }
+
+  @include mobile {
+    grid-template-columns: 100%;
+    max-width: 414px;
+  }
+
 }
 
 .investments-now {
   border-radius: clamp(18px, 1.709vw, 20px);
-  padding: 34px 20px;
+  padding: 34px Min(1.709vw,20px);
   background: var(--invest-now);
+  display: flex;
+  flex-direction: column;
+  grid-gap: clamp(16px, 1.88vw, 22px);
 
   &__descr {
     display: flex;
@@ -45,4 +63,182 @@
     right: -10px;
   }
 
+  &__form {
+    display: flex;
+    flex-direction: column;
+    grid-gap: clamp(16px, 1.709vw, 20px);
+  }
+
+  &__label {
+    width: 100%;
+    height: 55px;
+    position: relative;
+    background: var(--bg-g);
+    border-radius: 12px;
+
+    input {
+      height: 100%;
+      width: 100%;
+      background: transparent;
+      border-radius: 12px;
+
+      font-family: var(--font-family);
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 16px;
+      text-transform: uppercase;
+      text-indent: 55px;
+      color: var(--color-a);
+
+    }
+
+    svg {
+      position: absolute;
+      left: 13px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  @include tablet {
+    padding: 34px 20px;
+  }
+
+  @include mobile {
+   padding-bottom: 60px;
+  }
+
 }
+
+.investments-active {
+  grid-gap: clamp(16px, 1.88vw, 22px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  min-height: var(--card-height);
+  border: 1px solid var(--bg-d);
+  padding: 22px Min(1.709vw,20px) 30px;
+  border-radius: clamp(18px, 1.709vw, 20px);
+  background: var(--invest-active);
+  position: relative;
+
+
+  &__vidget {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), #A9FF65;
+    box-shadow: inset 0px 4px 4px #ABFC6C;
+    border-radius: 20px 0px;
+    padding: 5px 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-gap: 8px;
+
+    font-family: var(--font-family);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 14px;
+
+    color: var(--color-a);
+
+    svg {
+      fill: transparent;
+    }
+  }
+
+  &__top {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    grid-gap: 20px;
+  }
+
+  &__descr {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 10px;
+  }
+
+  &__image {
+    position: relative;
+
+    &::before {
+      z-index: -1;
+      width: 80px;
+      height: 60px;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      content: '';
+      position: absolute;
+      background: var(--bg-d);
+      filter: blur(44.1608px);
+    }
+  }
+
+  &__title {
+    font-family: var(--font-family);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 12px;
+    text-transform: uppercase;
+    color: var(--color-a);
+    text-align: center;
+  }
+
+  &__value {
+    display: flex;
+    align-items: center;
+    grid-gap: 10px;
+    justify-content: center;
+
+    font-family: var(--font-family);
+    font-style: normal;
+    font-weight: 700;
+    font-size: clamp(18px, 1.795vw, 21px);
+    line-height: 100%;
+    text-transform: uppercase;
+
+    color: var(--color-a);
+
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+  }
+
+  @include tablet {
+    padding: 22px 20px 30px;
+  }
+}
+
+
+.investments-default {
+  min-height: var(--card-height);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  grid-gap: 20px;
+  background: rgba(130, 71, 229, 0.05);
+  border: 1px dashed var(--bg-d);
+  border-radius: clamp(18px, 1.709vw, 20px);
+
+
+  &__title {
+    font-family: var(--font-family);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 16px;
+    text-transform: uppercase;
+    color: var(--color-a);
+  }
+}
+
+

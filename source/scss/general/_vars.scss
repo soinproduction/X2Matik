@@ -22,9 +22,9 @@
   --color-с: #5FD6FF; // var(--color-с);
   --color-d: #8247E5; // var(--color-d);
   --color-e: #BE97FF; // var(--color-e);
-  // --color-f: #004976; // var(--color-f);
-  // --color-g: #c4c4c4; // var(--color-g);
-  // --color-h: #000D28; // var(--color-h);
+  --color-f: #977CC6; // var(--color-f);
+  --color-g: #08040E; // var(--color-g);
+  --color-h: #C0B5D2; // var(--color-h);
   // --color-j: #BDBDBD; // var(--color-j);
   // --color-i: #F17B7B; // var(--color-i);
 
@@ -34,15 +34,17 @@
   --bg-c: #5FD6FF; // var(--bg-c);
   --bg-d: #8247E5; // var(--bg-d);
   --bg-e: #BE97FF; // var(--bg-e);
-  // --bg-f: #E0C087; // var(--bg-f);
-  // --bg-g: #004976; // var(--bg-g);
-  // --bg-h: #E5EDF1; // var(--bg-h);
+  --bg-f: #977CC6; // var(--bg-f);
+  --bg-g: #08040E; // var(--bg-g);
+  --bg-h: #C0B5D2; // var(--bg-h);
   // --bg-i: #EBEBEB; // var(--bg-i);
 
 
   --logo-gradient:
   linear-gradient(180deg, #8247E5 0%, rgba(130, 71, 229, 0) 100%);
 
-  --invest-now :linear-gradient(180deg, #8247E5 0%, rgba(130, 71, 229, 0) 100%);
+  --invest-now:linear-gradient(180deg, #8247E5 0%, rgba(130, 71, 229, 0) 100%);
+  --invest-active:linear-gradient(0deg, rgba(130, 71, 229, 0.54) 0%, rgba(130, 71, 229, 0) 52.21%);
+  --ref-inner:linear-gradient(180deg, #1D0F32 0%, #0A0611 100%);
 
 }

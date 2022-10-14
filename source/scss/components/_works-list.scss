@@ -1,0 +1,114 @@
+.works-list {
+  counter-reset: li;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 30px 20px;
+  align-items: stretch;
+
+
+  @include tablet {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px 30px;
+  }
+
+  @include mobile {
+    grid-template-columns: 100%;
+  }
+
+
+  &__item {
+    height: 100%;
+
+  }
+
+  &__inner {
+    cursor: pointer;
+    transition: transform .4s;
+    padding: 30px 20px clamp(30px, 5.983vw, 70px);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    grid-gap: clamp(30px, 4.274vw, 50px);
+    height: 100%;
+    position: relative;
+    border-radius: clamp(18px, 1.709vw, 20px);
+
+    &:hover {
+      transform: scale(1.05);
+
+      &::after {
+        opacity: 0.8;
+        background: var(--bg-b) linear-gradient(327.49deg, #1D0F32 1.06%, rgba(29, 15, 50, 0) 93.45%);
+      }
+    }
+
+    &::before {
+      content: "";
+      z-index: -2;
+      position: absolute;
+      top: -1px;
+      right: -1px;
+      bottom: -1px;
+      left: -1px;
+      background: linear-gradient(90.32deg, #8247E5 1.21%, rgba(130, 71, 229, 0) 99.77%);
+      border-radius: inherit;
+      pointer-events: none;
+    }
+    &:after {
+      pointer-events: none;
+      content: "";
+      z-index: -1;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: var(--bg-b) linear-gradient(327.49deg, #1D0F32 1.06%, rgba(29, 15, 50, 0) 93.45%);
+      border-radius: inherit;
+      transition: opacity .4s;
+    }
+  }
+
+  &__descr {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    grid-gap: clamp(10px, 1.282vw, 15px);
+  }
+
+  &__title {
+    font-family: var(--font-family);
+    font-style: normal;
+    font-weight: 700;
+    font-size:  clamp(18px, 1.795vw, 21px);
+    line-height: 100%;
+    color: var(--color-a);
+
+    &::before {
+      counter-increment: li;
+      content: counter(li)".";
+    }
+  }
+
+  &__text {
+    font-family: var(--font-family);
+    font-style: normal;
+    font-weight: 400;
+    font-size: clamp(14px, 1.368vw, 16px);
+    line-height: 138%;
+    text-align: center;
+    flex-grow: 1;
+
+    color: var(--color-h);
+  }
+
+  &__image {
+
+    img {
+      height: 100px;
+    }
+  }
+}

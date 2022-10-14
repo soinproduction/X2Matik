@@ -1,0 +1,27 @@
+.works {
+  padding: clamp(45px, 10.256vw, 120px) 0 clamp(40px, 5.128vw, 60px);
+  position: relative;
+
+
+  &::after {
+    @include round;
+    top: 60%;
+    left: calc((452px - 84px) * -1);
+    transform: translateY(-50%);
+    z-index: -2;
+  }
+  &::before {
+    @include round;
+    top: 60%;
+    right: calc((452px - 84px) * -1);
+    transform: translateY(-50%);
+    z-index: -2;
+  }
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-gap: clamp(30px, 5.128vw, 60px);
+  }
+}

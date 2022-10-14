@@ -8,6 +8,7 @@ export default {
   modals: [...document.querySelectorAll('[data-popup]')],
   modalsButton: [...document.querySelectorAll("[data-btn-modal]")],
   header: document.querySelector("header"),
+  card: document.querySelector(".investments-now"),
 
 }
 

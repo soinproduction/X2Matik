@@ -9,4 +9,5 @@ import './components/getDinamicHeight';
 import './components/tabs';
 import './components/animate';
 import './components/select';
+import './components/buffer';
 

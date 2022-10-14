@@ -80,9 +80,9 @@
 
         <div class="investments__box">
           <div class="main-top investments__top">
-            <h1 class="main-top__title">
+            <h2 class="main-top__title">
               investments
-            </h1>
+            </h2>
           </div>
 
 
@@ -173,11 +173,9 @@
                   <p class="investments-now__descr">
                     <span>Invest and get</span>
                       5%
-
                       <span>
                         everyday <b>60 days</b>
                       </span>
-
                   </p>
 
                   <div class="investments-now__image">
@@ -189,9 +187,9 @@
 
                 </div>
 
-                <form action="#">
-                  <label for="#">
-                    <input type="number">
+                <form action="#" class="investments-now__form">
+                  <label for="#" class="investments-now__label">
+                    <input type="number" value="10">
                     <svg width='30' height='30'>
                       <use href='img/sprite/sprite.svg#main-icon'></use>
                     </svg>
@@ -228,6 +226,99 @@
 
               </div>
             </li>
+
+            <li class="investments-cards__item">
+              <div class="investments-active">
+
+                <span class="investments-active__vidget">
+                  <svg width='18' height='18'>
+                    <use href='img/sprite/sprite.svg#active'></use>
+                  </svg>
+                  Activate
+                </span>
+                <div class="investments-active__top">
+                  <div class="investments-active__image">
+                    <picture>
+                      <source type='image/webp' srcset='img/invest.webp'>
+                      <img width='110' height='100' src='img/invest.png' alt='image'>
+                    </picture>
+                  </div>
+
+                  <div class="investments-active__descr">
+                    <p class="investments-active__title">
+                      Avaible dividends:
+                    </p>
+
+                    <span class="investments-active__value">
+                      <svg width='30' height='30'>
+                        <use href='img/sprite/sprite.svg#main-icon'></use>
+                      </svg>
+
+                      5.748763 Matic
+                    </span>
+
+                  </div>
+
+                </div>
+
+                <button class="arrow-button">
+                  Claim dividends
+
+                  <svg width='24' height='24'>
+                    <use href='img/sprite/sprite.svg#arrow'></use>
+                  </svg>
+                </button>
+
+                <ul class="investments-list">
+                  <li class="investments-list__item">
+                    <span class="investments-list__name">
+                      Date:
+                    </span>
+                    <span class="investments-list__value">
+                      11.10.2022
+                    </span>
+                  </li>
+                  <li class="investments-list__item">
+                    <span class="investments-list__name">
+                      Invested:
+                    </span>
+                    <span class="investments-list__value">
+                      100 Matic
+                    </span>
+                  </li>
+                  <li class="investments-list__item">
+                    <span class="investments-list__name">
+                      Paid:
+                    </span>
+                    <span class="investments-list__value">
+                      2000 Matic
+                    </span>
+                  </li>
+                </ul>
+
+              </div>
+            </li>
+
+            <li class="investments-cards__item">
+              <button class="investments-default">
+                  <svg width='57' height='50'>
+                    <use href='img/sprite/sprite.svg#default'></use>
+                  </svg>
+                  <p class="investments-default__title">
+                    Future deposit
+                  </p>
+              </button>
+            </li>
+            <li class="investments-cards__item">
+              <button class="investments-default">
+                  <svg width='57' height='50'>
+                    <use href='img/sprite/sprite.svg#default'></use>
+                  </svg>
+                  <p class="investments-default__title">
+                    Future deposit
+                  </p>
+              </button>
+            </li>
           </ul>
 
 
@@ -238,14 +329,231 @@
     </section>
 
     <section id="referral" class="referral">
-      <div class="container">
+      <div class="container container--mode">
+        <div class="referral__box">
+          <div class="main-top">
+            <h2 class="main-top__title">
+              referral program
+            </h2>
+          </div>
+
+          <div class="referral__inner">
+            <div class="referral__top">
+              <span class="referral__top-descr">
+                You Referral link:
+              </span>
+              <div class="referral__link-wrapper buffer">
+                <input class="buffer__input" type="text" value="https://cloud-mining.io/ref-24835353">
+                <button class="buffer__button">
+                  Copy link
+                  <svg width='20' height='20'>
+                    <use href='img/sprite/sprite.svg#copy'></use>
+                  </svg>
+                </button>
+              </div>
+              <button class="referral__promo">
+                promo tools
+              </button>
+            </div>
+
+            <ul class="referral-list">
+              <li class="referral-list__item">
+                <div class="referral-card">
+                  <p class="referral-card__info">
+                    1 level
+                    <span>
+                      7%
+                    </span>
+                  </p>
+
+                  <ul class="info-list">
+                    <li class="info-list__item">
+                      <span class="info-list__name">
+                        <b>238</b> referrals
+                      </span>
+                      <span class="info-list__value">
+                        <svg width="30" height="30">
+                          <use href="img/sprite/sprite.svg#main-icon"></use>
+                        </svg>
+                        5.748763 Matic
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="referral-list__item">
+                <div class="referral-card">
+                  <p class="referral-card__info">
+                    2 level
+                    <span>
+                      3 %
+                    </span>
+                  </p>
+
+                  <ul class="info-list">
+                    <li class="info-list__item">
+                      <span class="info-list__name">
+                        <b>238</b> referrals
+                      </span>
+                      <span class="info-list__value">
+                        <svg width="30" height="30">
+                          <use href="img/sprite/sprite.svg#main-icon"></use>
+                        </svg>
+                        5.748763 Matic
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="referral-list__item">
+                <div class="referral-card">
+                  <p class="referral-card__info">
+                    Total:
+                    <span>
+                      2383
+                    </span>
+                  </p>
+
+                  <ul class="info-list">
+                    <li class="info-list__item">
+                      <span class="info-list__name">
+                        Referrals
+                      </span>
+                      <span class="info-list__value">
+                        <svg width="30" height="30">
+                          <use href="img/sprite/sprite.svg#main-icon"></use>
+                        </svg>
+                        5.748763 Matic
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+
+              <li class="referral-list__item">
+                <div class="referral-card referral-card--deffault">
+                  <ul class="info-list">
+                    <li class="info-list__item">
+                      <span class="info-list__name">
+                        Avaible rewards:
+                      </span>
+                      <span class="info-list__value">
+                        <svg width="30" height="30">
+                          <use href="img/sprite/sprite.svg#main-icon"></use>
+                        </svg>
+                        5.748763 Matic
+                      </span>
+                    </li>
+                  </ul>
+
+                  <button class="arrow-button">
+                    withdraw
+
+                    <svg width='24' height='24'>
+                      <use href='img/sprite/sprite.svg#arrow'></use>
+                    </svg>
+                  </button>
+                </div>
+              </li>
+            </ul>
+
+          </div>
+        </div>
 
       </div>
     </section>
 
     <section id="works" class="works">
       <div class="container">
+        <div class="works__box">
+          <div class="main-top">
+            <h2 class="main-top__title">
+              how it works?
+            </h2>
 
+            <p class="main-top__subtitle">
+              X2tron.pro is a fully decentralized investment platform built on a smart contract in the TRON network. The smart contract is open and verifiable, it can’t be corrupted or tampered with. Blockchain technology ensures 100% fairness and transparency of the fund.
+            </p>
+          </div>
+
+          <ul class="works-list">
+            <li class="works-list__item">
+              <div class="works-list__inner">
+                <div class="works-list__image">
+                  <picture>
+                    <source type='image/webp' srcset='img/works.webp'>
+                    <img width='90' height='98' src='img/works.png' alt='image'>
+                  </picture>
+                </div>
+                <div class="works-list__descr">
+                  <h3 class="works-list__title">CRYPTO WALLET</h3>
+
+                <p class="works-list__text">
+                  To start investing users must be logged in to a crypto wallet The most popular Tron wallets that have the most users are Tronlink, TronWallet.
+                </p>
+                </div>
+              </div>
+            </li>
+            <li class="works-list__item">
+              <div class="works-list__inner">
+                <div class="works-list__image">
+                  <picture>
+                    <source type='image/webp' srcset='img/works2.webp'>
+                    <img width='82' height='98' src='img/works2.png' alt='image'>
+                  </picture>
+                </div>
+                <div class="works-list__descr">
+                  <h3 class="works-list__title">SMART CONTRACT</h3>
+
+                <p class="works-list__text">
+                  X2tron smart contract generates 20% of the investment amount daily and guarantees a final profit of 200% in 10 days.
+                </p>
+                </div>
+              </div>
+            </li>
+            <li class="works-list__item">
+              <div class="works-list__inner">
+                <div class="works-list__image">
+                  <picture>
+                    <source type='image/webp' srcset='img/works3.webp'>
+                    <img width='102' height='98' src='img/works3.png' alt='image'>
+                  </picture>
+                </div>
+                <div class="works-list__descr">
+
+                <h3 class="works-list__title">INVESTMENT PROFIT</h3>
+
+                <p class="works-list__text">
+                  The profit (dividends) accrued to your account on a daily basis and in real-time. You can withdraw the dividends at any time.
+                </p>
+                </div>
+
+
+              </div>
+            </li>
+            <li class="works-list__item">
+              <div class="works-list__inner">
+                <div class="works-list__image">
+                  <picture>
+                    <source type='image/webp' srcset='img/works4.webp'>
+                    <img width='98' height='98' src='img/works4.png' alt='image'>
+                  </picture>
+                </div>
+
+                <div class="works-list__descr">
+                  <h3 class="works-list__title">REFERRAL REWARD</h3>
+
+                <p class="works-list__text">
+                  The two-level referral program allows earning 7% + 3% from invited investors.
+                </p>
+                </div>
+
+
+
+              </div>
+            </li>
+          </ul>
+        </div>
       </div>
     </section>
 
