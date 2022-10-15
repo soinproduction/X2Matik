@@ -2,6 +2,21 @@
   padding: clamp(45px, 10.256vw, 120px) 0 clamp(40px, 5.128vw, 60px);
   position: relative;
 
+  .left-frame-coin {
+    width: Min(8.268vw, 105px);
+    height: Min(7.087vw, 90px);
+    right: 8%;
+    top: 18%;
+  }
+
+  .right-frame-coin {
+    width: min(9.449vw, 70px);
+    height: auto;
+    bottom: 28%;
+    left: 6%;
+    z-index: 10;
+  }
+
 
   &::after {
     @include round;

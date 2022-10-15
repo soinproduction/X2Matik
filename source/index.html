@@ -2,7 +2,7 @@
 <html lang="Uk-uk">
 @include('partials/head.html')
 
-<body data-overlay>
+<body>
   @include('partials/header.html')
 
   <main>
@@ -22,6 +22,37 @@
 
       <div class="smart__inner">
         <div class="container">
+
+          <div class="smart-frame left-frame">
+            <picture>
+              <source type='image/webp' srcset='img/index-left.webp'>
+              <img width='100' height='100' src='img/index-left.png' alt='image'>
+            </picture>
+          </div>
+
+          <div class="smart-frame right-frame">
+            <picture>
+              <source type='image/webp' srcset='img/index-right.webp'>
+              <img width='100' height='100' src='img/index-right.png' alt='image'>
+            </picture>
+          </div>
+
+
+          <div class="smart-frame left-frame-coin">
+            <picture>
+              <source type='image/webp' srcset='img/referral-right.webp'>
+              <img width='120' height='149' src='img/referral-right.png' alt='image'>
+            </picture>
+          </div>
+          <div class="smart-frame right-frame-coin">
+            <picture>
+              <source type='image/webp' srcset='img/referral-left.webp'>
+              <img width='100' height='130' src='img/referral-left.png' alt='image'>
+            </picture>
+          </div>
+
+
+
           <div class="smart__box">
             <div class="main-top">
               <h1 class="main-top__title">
@@ -34,7 +65,8 @@
             </div>
 
             <div class="smart__buttons">
-              <button class="smart__button smart__button--transparent">
+              <button class="smart__button smart__button--transparent"
+              data-btn-modal="calculator" aria-label="Закрыть модальное окно">
                 Calculator
               </button>
               <button class="smart__button">
@@ -187,8 +219,8 @@
 
                 </div>
 
-                <form action="#" class="investments-now__form">
-                  <label for="#" class="investments-now__label">
+                <form action="#" class="investments-form">
+                  <label for="#" class="investments-form__label">
                     <input type="number" value="10">
                     <svg width='30' height='30'>
                       <use href='img/sprite/sprite.svg#main-icon'></use>
@@ -329,141 +361,191 @@
     </section>
 
     <section id="referral" class="referral">
-      <div class="container container--mode">
-        <div class="referral__box">
-          <div class="main-top">
-            <h2 class="main-top__title">
-              referral program
-            </h2>
-          </div>
 
-          <div class="referral__inner">
-            <div class="referral__top">
-              <span class="referral__top-descr">
-                You Referral link:
-              </span>
-              <div class="referral__link-wrapper buffer">
-                <input class="buffer__input" type="text" value="https://cloud-mining.io/ref-24835353">
-                <button class="buffer__button">
-                  Copy link
-                  <svg width='20' height='20'>
-                    <use href='img/sprite/sprite.svg#copy'></use>
-                  </svg>
-                </button>
-              </div>
-              <button class="referral__promo">
-                promo tools
-              </button>
+      <div class="smart-frame left-frame-coin">
+        <picture>
+          <source type='image/webp' srcset='img/referral-left.webp'>
+          <img width='120' height='149' src='img/referral-left.png' alt='image'>
+        </picture>
+      </div>
+      <div class="smart-frame right-frame-coin">
+        <picture>
+          <source type='image/webp' srcset='img/referral-right.webp'>
+          <img width='100' height='130' src='img/referral-right.png' alt='image'>
+        </picture>
+      </div>
+
+      <div class="smart-frame bottom-frame-coin">
+        <picture>
+          <source type='image/webp' srcset='img/referral-bottom.webp'>
+          <img width='69' height='70' src='img/referral-bottom.png' alt='image'>
+        </picture>
+      </div>
+
+
+
+      <div class="referral__wrapper">
+        <div class="container container--mode">
+          <div class="referral__box">
+            <div class="main-top">
+              <h2 class="main-top__title">
+                referral program
+              </h2>
             </div>
 
-            <ul class="referral-list">
-              <li class="referral-list__item">
-                <div class="referral-card">
-                  <p class="referral-card__info">
-                    1 level
-                    <span>
-                      7%
-                    </span>
-                  </p>
-
-                  <ul class="info-list">
-                    <li class="info-list__item">
-                      <span class="info-list__name">
-                        <b>238</b> referrals
-                      </span>
-                      <span class="info-list__value">
-                        <svg width="30" height="30">
-                          <use href="img/sprite/sprite.svg#main-icon"></use>
-                        </svg>
-                        5.748763 Matic
-                      </span>
-                    </li>
-                  </ul>
-                </div>
-              </li>
-              <li class="referral-list__item">
-                <div class="referral-card">
-                  <p class="referral-card__info">
-                    2 level
-                    <span>
-                      3 %
-                    </span>
-                  </p>
-
-                  <ul class="info-list">
-                    <li class="info-list__item">
-                      <span class="info-list__name">
-                        <b>238</b> referrals
-                      </span>
-                      <span class="info-list__value">
-                        <svg width="30" height="30">
-                          <use href="img/sprite/sprite.svg#main-icon"></use>
-                        </svg>
-                        5.748763 Matic
-                      </span>
-                    </li>
-                  </ul>
-                </div>
-              </li>
-              <li class="referral-list__item">
-                <div class="referral-card">
-                  <p class="referral-card__info">
-                    Total:
-                    <span>
-                      2383
-                    </span>
-                  </p>
-
-                  <ul class="info-list">
-                    <li class="info-list__item">
-                      <span class="info-list__name">
-                        Referrals
-                      </span>
-                      <span class="info-list__value">
-                        <svg width="30" height="30">
-                          <use href="img/sprite/sprite.svg#main-icon"></use>
-                        </svg>
-                        5.748763 Matic
-                      </span>
-                    </li>
-                  </ul>
-                </div>
-              </li>
-
-              <li class="referral-list__item">
-                <div class="referral-card referral-card--deffault">
-                  <ul class="info-list">
-                    <li class="info-list__item">
-                      <span class="info-list__name">
-                        Avaible rewards:
-                      </span>
-                      <span class="info-list__value">
-                        <svg width="30" height="30">
-                          <use href="img/sprite/sprite.svg#main-icon"></use>
-                        </svg>
-                        5.748763 Matic
-                      </span>
-                    </li>
-                  </ul>
-
-                  <button class="arrow-button">
-                    withdraw
-
-                    <svg width='24' height='24'>
-                      <use href='img/sprite/sprite.svg#arrow'></use>
+            <div class="referral__inner">
+              <div class="referral__top">
+                <span class="referral__top-descr">
+                  You Referral link:
+                </span>
+                <div class="referral__link-wrapper buffer">
+                  <input class="buffer__input" type="text" value="https://cloud-mining.io/ref-24835353">
+                  <button class="buffer__button">
+                    Copy link
+                    <svg width='20' height='20'>
+                      <use href='img/sprite/sprite.svg#copy'></use>
                     </svg>
                   </button>
                 </div>
-              </li>
-            </ul>
+                <button class="referral__promo">
+                  promo tools
+                </button>
+              </div>
 
+              <ul class="referral-list">
+                <li class="referral-list__item">
+                  <div class="referral-card">
+                    <p class="referral-card__info">
+                      1 level
+                      <span>
+                        7%
+                      </span>
+                    </p>
+
+                    <ul class="info-list">
+                      <li class="info-list__item">
+                        <span class="info-list__name">
+                          <b>238</b> referrals
+                        </span>
+                        <span class="info-list__value">
+                          <svg width="30" height="30">
+                            <use href="img/sprite/sprite.svg#main-icon"></use>
+                          </svg>
+                          5.748763 Matic
+                        </span>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="referral-list__item">
+                  <div class="referral-card">
+                    <p class="referral-card__info">
+                      2 level
+                      <span>
+                        3 %
+                      </span>
+                    </p>
+
+                    <ul class="info-list">
+                      <li class="info-list__item">
+                        <span class="info-list__name">
+                          <b>238</b> referrals
+                        </span>
+                        <span class="info-list__value">
+                          <svg width="30" height="30">
+                            <use href="img/sprite/sprite.svg#main-icon"></use>
+                          </svg>
+                          5.748763 Matic
+                        </span>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="referral-list__item">
+                  <div class="referral-card">
+                    <p class="referral-card__info">
+                      Total:
+                      <span>
+                        2383
+                      </span>
+                    </p>
+
+                    <ul class="info-list">
+                      <li class="info-list__item">
+                        <span class="info-list__name">
+                          Referrals
+                        </span>
+                        <span class="info-list__value">
+                          <svg width="30" height="30">
+                            <use href="img/sprite/sprite.svg#main-icon"></use>
+                          </svg>
+                          5.748763 Matic
+                        </span>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="referral-list__item">
+                  <div class="referral-card referral-card--deffault">
+                    <ul class="info-list">
+                      <li class="info-list__item">
+                        <span class="info-list__name">
+                          Avaible rewards:
+                        </span>
+                        <span class="info-list__value">
+                          <svg width="30" height="30">
+                            <use href="img/sprite/sprite.svg#main-icon"></use>
+                          </svg>
+                          5.748763 Matic
+                        </span>
+                      </li>
+                    </ul>
+
+                    <button class="arrow-button">
+                      withdraw
+
+                      <svg width='24' height='24'>
+                        <use href='img/sprite/sprite.svg#arrow'></use>
+                      </svg>
+                    </button>
+                  </div>
+                </li>
+              </ul>
+
+            </div>
           </div>
-        </div>
 
+          <button class="referral__button">
+            <svg width='24' height='24'>
+              <use href='img/sprite/sprite.svg#ref'></use>
+            </svg>
+              Referral reward statistics
+          </button>
+
+
+        </div>
       </div>
+
+
+
     </section>
 
     <section id="works" class="works">
+
+      <div class="smart-frame left-frame-coin">
+        <picture>
+          <source type='image/webp' srcset='img/referral-left.webp'>
+          <img width='120' height='149' src='img/referral-left.png' alt='image'>
+        </picture>
+      </div>
+      <div class="smart-frame right-frame-coin">
+        <picture>
+          <source type='image/webp' srcset='img/referral-right.webp'>
+          <img width='70' height='86' src='img/referral-right.png' alt='image'>
+        </picture>
+      </div>
+
+
       <div class="container">
         <div class="works__box">
           <div class="main-top">
@@ -556,18 +638,12 @@
         </div>
       </div>
     </section>
-
-
-
-
-
-
-
   </main>
 
 
 
   @include('partials/footer.html')
+  @include('partials/modals.html')
 </body>
 
 <script defer src="js/main.js"></script>

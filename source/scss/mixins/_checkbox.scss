@@ -73,9 +73,6 @@
   pointer-events: none;
 }
 
-
-/* GREEN CHECKBOX */
-
 .custom-checkbox {
   position: relative;
   max-width: 46px;
@@ -94,7 +91,7 @@
 	&:checked {
 		+ {
 			.checkbox-label {
-				box-shadow: inset 0 0 0 20px #6216e6;
+				box-shadow: inset 0 0 0 20px var(--bg-g);
 				&:before {
 					left: calc(100% - 22px);
 				}

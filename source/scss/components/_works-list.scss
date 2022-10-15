@@ -34,23 +34,14 @@
     position: relative;
     border-radius: clamp(18px, 1.709vw, 20px);
 
-    &:hover {
-      transform: scale(1.05);
-
-      &::after {
-        opacity: 0.8;
-        background: var(--bg-b) linear-gradient(327.49deg, #1D0F32 1.06%, rgba(29, 15, 50, 0) 93.45%);
-      }
-    }
-
     &::before {
       content: "";
       z-index: -2;
       position: absolute;
-      top: -1px;
-      right: -1px;
-      bottom: -1px;
-      left: -1px;
+      top: -1.5px;
+      right: -1.5px;
+      bottom: -1.5px;
+      left: -1.5px;
       background: linear-gradient(90.32deg, #8247E5 1.21%, rgba(130, 71, 229, 0) 99.77%);
       border-radius: inherit;
       pointer-events: none;

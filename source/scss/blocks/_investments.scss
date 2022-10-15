@@ -36,10 +36,10 @@
       content: "";
       z-index: -2;
       position: absolute;
-      top: -1px;
-      right: -1px;
-      bottom: -1px;
-      left: -1px;
+      top: -1.5px;
+      right: -1.5px;
+      bottom: -1.5px;
+      left: -1.5px;
       background: linear-gradient(90.32deg, #8247E5 1.21%, rgba(130, 71, 229, 0) 99.77%);
       border-radius: inherit;
       pointer-events: none;
@@ -60,6 +60,12 @@
 
     &-item {
       position: relative;
+
+      &:first-child {
+        .info-list__value {
+          color: var(--color-e);
+        }
+      }
 
       .info-list__value {
         flex-grow: 1;

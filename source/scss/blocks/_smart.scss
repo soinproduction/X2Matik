@@ -1,5 +1,4 @@
 .smart {
-  // outline: 1px solid red;
   position: relative;
   z-index: 0;
   bottom: 0;
@@ -136,6 +135,36 @@
     bottom: -35px;
   }
 
+  .right-frame {
+    width: Min(33.071vw, 420px);
+    height: Min(37.48vw, 476px);
+    right: -8%;
+    bottom: -50%;
+  }
+
+  .left-frame {
+    width: Min(23.071vw, 293px);
+    height: Min(32.047vw, 407px);
+    bottom: -34%;
+    left: -2%;
+    z-index: 5;
+  }
+
+  .left-frame-coin {
+    width: Min(9.449vw, 120px);
+    height: Min(11.732vw, 149px);
+    left: 17%;
+    bottom: -44%;
+  }
+
+  .right-frame-coin {
+    width: Min(8.268vw, 105px);
+    height: Min(7.087vw, 90px);
+    bottom: -2%;
+    right: 12.5%;
+  }
+
+
 }
 
 
@@ -153,3 +182,5 @@
     left: 8%;
   }
 }
+
+

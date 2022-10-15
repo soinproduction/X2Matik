@@ -1,0 +1,101 @@
+.modal-title {
+  font-size: clamp(26px, 4.331vw, 55px);
+  line-height: 100%;
+}
+
+.modal__close {
+  position: absolute;
+  top: clamp(10px, 1.575vw, 20px);
+  left: clamp(10px, 1.575vw, 20px);
+  z-index: 10;
+}
+
+.modal-calculator {
+  padding: 56px clamp(24px, 2.52vw, 32px) 32px;
+  max-width: 840px;
+  width: 90vw;
+  margin: 0 auto;
+  background: var(--modal-bg);
+  border-radius: clamp(18px, 1.575vw, 20px);
+
+  display: grid;
+  grid-template-columns: 1fr .9fr;
+  grid-gap: clamp(20px, 4.331vw, 55px) Min(5.276vw, 67px);
+
+  &__subtitle {
+    @include for-mobile {
+      display: none;
+    }
+  }
+
+  .main-top {
+    grid-column: 1/span 2;
+    width: fit-content;
+  }
+
+  &__coll {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    grid-gap: clamp(20px, 1.969vw, 25px);
+    grid-column: 1;
+  }
+
+  &__box {
+    padding: 27px clamp(24px, 2.52vw, 32px) 29px;
+    background: linear-gradient(0deg, rgba(130, 71, 229, 0.54) 0%, rgba(130, 71, 229, 0) 52.21%);
+    border: 1px solid #8247E5;
+    border-radius: 20px;
+    margin: 0 Min(0.787vw, 10px);
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    grid-gap: 15px;
+    position: relative;
+
+    &:not(:first-child)::before {
+      height: 1.5px;
+      width: 100%;
+      content: '';
+      position: absolute;
+      left: 0;
+      top: -20px;
+      background-color: rgba(130, 71, 229, 0.18);
+    }
+  }
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__name {
+    font-family: var(--font-family);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 14px;
+    color: var(--color-a);
+  }
+
+  &__value {
+    font-family: var(--font-family);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 14px;
+    text-transform: uppercase;
+    color: var(--color-a);
+    display: flex;
+    align-items: center;
+    grid-gap: 8px;
+  }
+
+  .modal-calculator__list + .modal-calculator__list {
+    margin-top: 40px;
+  }
+}

@@ -12,7 +12,7 @@
 
   --overlay-bg: rgba(0, 0, 0, 0.5);
 
-  --font-family: "Muller"; // var(--font-family);
+  --font-family: "Muller" , sans-serif; // var(--font-family);
 
 
 
@@ -38,6 +38,8 @@
   --bg-g: #08040E; // var(--bg-g);
   --bg-h: #C0B5D2; // var(--bg-h);
   // --bg-i: #EBEBEB; // var(--bg-i);
+
+  --modal-bg: #2F1A4E;
 
 
   --logo-gradient:

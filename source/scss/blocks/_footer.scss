@@ -4,7 +4,7 @@
   grid-template-columns: 1fr auto;
   align-items: center;
   grid-gap: 30px;
-  padding: clamp(20px, 2.222vw, 26px) 0;
+  padding: clamp(20px, 3.937vw, 50px) 0 Min(1.575vw, 20px);
 
   &::before {
     width: 500px;
