@@ -20,6 +20,10 @@ header {
     left: 50%;
     transform: translateX(-55%);
     top: 0px;
+
+    @include mobile {
+      top: -100px;
+    }
   }
 
   @include for-laptop {

@@ -48,6 +48,10 @@
         display: none;
       }
     }
+
+    @include mobile {
+      right: 16px;
+    }
   }
 }
 

@@ -1,6 +1,10 @@
 .select {
   position: relative;
   // width: 100%;
+
+  @include mobile {
+    right: 56px;
+  }
 }
 
 .select.active .select__body {

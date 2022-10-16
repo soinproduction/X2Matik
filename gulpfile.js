@@ -62,6 +62,12 @@ const clean = () => {
   return del([buildFolder])
 }
 
+const json = () => {
+  return src([`${srcFolder}/**/**.json`])
+    // .pipe(avif())
+    .pipe(dest(`${buildFolder}`))
+};
+
 const faviconIcon = () => {
   return src(`${paths.faviconFolder}/**/**.png`)
     .pipe(ico('favicon.ico'))
@@ -124,7 +130,8 @@ const scripts = () => {
         filename: 'main.js',
       },
       module: {
-        rules: [{
+        rules: [
+          {
           test: /\.m?js$/,
           exclude: /node_modules/,
           use: {
@@ -137,7 +144,19 @@ const scripts = () => {
               ]
             }
           }
-        }]
+        },
+        {
+          type: 'javascript/auto',
+          test: /\.json$/,
+          include: /(lottie)/,
+          loader: 'lottie-web-webpack-loader',
+          options: {
+            assets: {
+              scale: 0.5 // proportional resizing multiplier
+            }
+          }
+        }
+      ]
       },
       devtool: !isProd ? 'source-map' : false
     }))
@@ -222,11 +241,7 @@ const webpImages = () => {
     .pipe(dest(paths.buildImgFolder))
 };
 
-// const avifImages = () => {
-//   return src([`${paths.srcImgFolder}/**/**.{jpg,jpeg,png}`])
-//     .pipe(avif())
-//     .pipe(dest(paths.buildImgFolder))
-// };
+
 
 const htmlInclude = () => {
   return src([`${srcFolder}/*.html`])
@@ -308,11 +323,11 @@ const toProd = (done) => {
   done();
 };
 
-exports.default = series(clean, htmlInclude, scripts, styles, resources, faviconIcon ,images,  webpImages, video, svgSprites, watchFiles);
+exports.default = series(clean, htmlInclude,json, scripts, styles, resources, faviconIcon ,images,  webpImages, video, svgSprites, watchFiles);
 
 exports.backend = series(clean, htmlInclude, scriptsBackend, stylesBackend, resources, video,images, webpImages, svgSprites)
 
-exports.build = series(toProd, clean, htmlInclude, scripts, styles, resources, faviconIcon ,video,images, webpImages, svgSprites, htmlMinify);
+exports.build = series(toProd, clean, htmlInclude, json, scripts, styles, resources, faviconIcon ,video,images, webpImages, svgSprites, htmlMinify);
 
 exports.cache = series(cache, rewrite);
 

@@ -12,3 +12,20 @@
     display: none;
   }
 }
+
+
+.mobile-menu {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: #2F1A4E;
+  z-index: 20;
+
+  display: none;
+
+  &__top {
+    padding: 27px 26px 38px;
+  }
+}

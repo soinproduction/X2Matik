@@ -1,8 +1,8 @@
 /* stylelint-disable */
 
 @mixin round {
-  width: 400px;
-  height: 400px;
+  width: clamp(300px, 52.151vw, 400px);
+  height: clamp(300px, 52.151vw, 400px);
   border-radius: 50%;
   content: '';
   background: var(--bg-d);

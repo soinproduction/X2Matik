@@ -10,4 +10,5 @@ import './components/tabs';
 import './components/animate';
 import './components/select';
 import './components/buffer';
+import './components/animationImage';
 
