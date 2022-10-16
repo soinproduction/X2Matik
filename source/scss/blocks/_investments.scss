@@ -36,10 +36,10 @@
       content: "";
       z-index: -2;
       position: absolute;
-      top: -1.5px;
-      right: -1.5px;
-      bottom: -1.5px;
-      left: -1.5px;
+      top: -2px;
+      right: -2px;
+      bottom: -2px;
+      left: -2px;
       background: linear-gradient(90.32deg, #8247E5 1.21%, rgba(130, 71, 229, 0) 99.77%);
       border-radius: inherit;
       pointer-events: none;
@@ -239,6 +239,11 @@
     text-decoration-line: underline;
 
     color: var(--color-e);
+
+    transition: all .4s;
+    &:hover {
+      color: #ccaefd;
+    }
 
   }
 }

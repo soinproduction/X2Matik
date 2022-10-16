@@ -125,7 +125,7 @@ video {
   align-items: center;
   height: 100%;
   min-height: var(--card-height);
-  border: 1.5px solid var(--bg-d);
+  border: 2px solid var(--bg-d);
   padding: 22px Min(1.709vw,20px) 30px;
   border-radius: clamp(18px, 1.709vw, 20px);
   background: var(--invest-active);
@@ -134,8 +134,8 @@ video {
 
   &__vidget {
     position: absolute;
-    left: -1.5px;
-    top: -1.5px;
+    left: -2px;
+    top: -2px;
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), #A9FF65;
     box-shadow: inset 0px 4px 4px #ABFC6C;
     border-radius: 20px 0px;
@@ -233,7 +233,7 @@ video {
   width: 100%;
   grid-gap: 20px;
   background: rgba(130, 71, 229, 0.05);
-  border: 1.5px dashed var(--bg-d);
+  border: 2px dashed var(--bg-d);
   border-radius: clamp(18px, 1.709vw, 20px);
 
 

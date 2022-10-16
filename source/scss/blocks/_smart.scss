@@ -98,10 +98,16 @@
     align-items: center;
     justify-content: center;
 
+    transition: all .4s;
+    &:hover {
+      box-shadow: 0px 18px 31px rgba(130, 71, 229, 0.25);
+      background: var(--bg-d);
+    }
+
 
     &--transparent {
       background: transparent;
-      border: 1.5px solid var(--bg-d);
+      border: 2px solid var(--bg-d);
       box-shadow: none;
     }
 
@@ -230,6 +236,7 @@
     height: Min(11.732vw, 149px);
     left: 17%;
     bottom: -44%;
+    animation: float 20s linear infinite;
 
     @include for-tablet {
       display: none;
@@ -249,6 +256,7 @@
     height: Min(7.087vw, 90px);
     bottom: -2%;
     right: 12.5%;
+    animation: float 30s linear infinite;
 
     @include for-tablet {
       display: none;

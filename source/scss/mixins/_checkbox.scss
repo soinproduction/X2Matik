@@ -62,6 +62,7 @@
 
 .custom-radio {
   @include custom-checkbox;
+
 }
 
 .custom-radio__field:checked + .custom-radio__content::after {

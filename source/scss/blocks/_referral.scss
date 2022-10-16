@@ -164,6 +164,13 @@
 
         text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
+        transition: all .4s;
+
+        &:hover {
+          box-shadow: 0px 13px 21px rgba(0,0,0, 0.5);
+          background: var(--bg-d);
+        }
+
         @include laptop {
           width: clamp(200px, 19.769vw, 360px);
         }
@@ -195,7 +202,7 @@
 
     width: clamp(200px, 23.675vw, 277px);
     height: clamp(56px, 5.556vw, 65px);
-    border: 1.5px solid var(--bg-d);
+    border: 2px solid var(--bg-d);
     border-radius: 16px;
     background-color: transparent;
     display: flex;
@@ -216,6 +223,12 @@
     @include mobile {
       grid-column: 1;
       width: 100%;
+    }
+
+    transition: all .4s;
+    &:hover {
+      box-shadow: 0px 18px 31px rgba(130, 71, 229, 0.25);
+      background: var(--bg-d);
     }
   }
 
