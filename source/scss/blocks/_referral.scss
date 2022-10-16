@@ -22,6 +22,7 @@
     height: Min(7.087vw, 90px);
     left: 8%;
     bottom: 52%;
+    animation: float 15s linear infinite;
   }
 
   .right-frame-coin {
@@ -29,7 +30,16 @@
     height: Min(11.732vw, 149px);
     bottom: 48%;
     right: 7.5%;
-    // z-index: 10;
+    animation: float 19s linear infinite;
+
+    @include tablet {
+      width: 95px;
+      height: auto;
+      bottom: -3%;
+      right: -1%;
+    }
+
+
   }
 
   .bottom-frame-coin {
@@ -38,6 +48,11 @@
     bottom: 9%;
     left: 31%;
     z-index: 10;
+    animation: float 6s linear infinite;
+
+    @include tablet {
+      display: none;
+    }
   }
 
 
@@ -235,6 +250,10 @@
       @include wave;
       bottom: -56%;
       z-index: -2;
+
+      @include tablet {
+        bottom: -25vw;
+      }
     }
   }
 

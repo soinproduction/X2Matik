@@ -10,10 +10,12 @@
   opacity: 0;
   height: -webkit-fill-available;
 
-  transition: all .4s ease;
+  transition: all 1s;
   padding: 20px 20px;
   overflow-y: scroll;
   pointer-events: none;
+    transition-delay: 0.5s;
+
 
   &::-webkit-scrollbar {
     display: none;
@@ -22,7 +24,7 @@
   &.active {
     background-color: rgba(0, 0, 0, 0.564);
     pointer-events: initial;
-    transition: opacity 0.5s ease;
+    transition: all .6s;
     opacity: 1;
     display: grid;
     visibility: visible;

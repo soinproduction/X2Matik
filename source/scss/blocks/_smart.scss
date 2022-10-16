@@ -280,6 +280,7 @@
   &--right {
     right: 10%;
     top: 4%;
+    animation: float 6s linear infinite;
 
     @media (max-width: 1440px) {
       right: 0;
@@ -294,6 +295,7 @@
   &--left {
     top: 5%;
     left: 8%;
+    animation: float 8s linear infinite;
 
     @media (max-width: 1440px) {
       left: 0;

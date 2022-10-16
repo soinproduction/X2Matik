@@ -7,6 +7,10 @@
 
   --header-height: 160px;
 
+  @media (max-width: 576px) {
+    --header-height: 101px;
+  }
+
   --scrollbar-thumb: #8247E5;
   --scrollbar-thumb-hover: #8247E5;
   --scrollbar-track: #08040E;

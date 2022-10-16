@@ -16,9 +16,16 @@ const mobileMenuHandler = function( menu, button, body) {
   })
 }
 
+const links = [...document.querySelectorAll('.mobile-menu__link')]
+
 burger.map(function(btn){
   mobileMenuHandler(mobileMenu,btn, vars.bodyEl);
 })
+
+links.map(function(btn){
+  mobileMenuHandler(mobileMenu,btn, vars.bodyEl);
+})
+
 
 
 

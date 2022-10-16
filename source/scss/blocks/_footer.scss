@@ -1,27 +1,58 @@
+footer {
+  padding: clamp(20px, 3.937vw, 50px) 0 Min(1.575vw, 20px);
+
+  // @include small-tablet {
+  //   overflow: hidden;
+  // }
+}
+
 .footer {
   position: relative;
+  z-index: 40;
   display: grid;
   grid-template-columns: 1fr auto;
   align-items: center;
   grid-gap: 30px;
-  padding: clamp(20px, 3.937vw, 50px) 0 Min(1.575vw, 20px);
+
 
   &::before {
-    width: 500px;
-    height: 80px;
+    width: 800px;
+    height: 100%;
     border-radius: 50%;
     content: '';
-    background: var(--bg-d);
-    filter: blur(Min(10.94vw, 128px));
+    background: url(../img/footer.png);
     position: absolute;
     background-repeat: no-repeat;
     background-position: center;
+    background-size: 100% 100%;
     z-index: -1;
     left: 50%;
     transform: translateX(-50%);
-    bottom: 0;
+    bottom: calc(Min(1.575vw, 20px) * -1);
     border-radius: 50% 50% 0 0;
   }
+
+  .connect-walet--mobile {
+    position: absolute;
+    right: 0;
+  }
+
+  .select {
+    @include small-tablet {
+      right: 56px;
+    }
+  }
+
+  @include small-tablet {
+    grid-template-columns: auto auto 24px;
+    justify-content: space-between;
+  }
+
+  @include tablet {
+    grid-gap: 20px;
+  }
+
+
 
   @include for-laptop {
     left: 30px;

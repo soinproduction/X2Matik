@@ -17,7 +17,8 @@
     transform: scaleY(-1);
   }
   .select__body {
-    display: block;
+    visibility: visible;
+    opacity: 1;
   }
 
   .select__header {
@@ -61,17 +62,19 @@
 }
 
 .select__body {
+  opacity: 0;
   border-radius: 12px !important;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
   z-index: 5;
-
-  display: none;
+  transition: all .4s;
+  visibility: hidden;
   // width: 100%;
   max-height: 0;
   margin-top: 10px;
   padding: 0;
+  overflow: hidden;
 
 
   border-top: none;

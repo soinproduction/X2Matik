@@ -24,6 +24,10 @@
     color: var(--color-a);
     z-index: 0;
 
+    i {
+      display: flex;
+    }
+
     &::before {
       content: "";
       position: absolute;

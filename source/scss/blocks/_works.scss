@@ -7,6 +7,11 @@
     height: Min(7.087vw, 90px);
     right: 8%;
     top: 18%;
+    animation: float 6s linear infinite;
+
+    @include tablet {
+      display: none;
+    }
   }
 
   .right-frame-coin {
@@ -14,7 +19,7 @@
     height: auto;
     bottom: 28%;
     left: 6%;
-
+    animation: float 12s linear infinite;
   }
 
 
