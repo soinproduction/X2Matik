@@ -47,6 +47,12 @@ footer {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
+i {
+  font-style: normal;
+  transform: translateY(12%);
+  pointer-events: none;
+}
+
 a {
   display: inline-flex;
   margin: 0;

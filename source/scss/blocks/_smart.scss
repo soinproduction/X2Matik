@@ -77,6 +77,10 @@
     align-items: center;
     justify-content: center;
 
+    i {
+      margin-bottom: -1.5%;
+    }
+
     &--transparent {
       background: transparent;
       border: 1.5px solid var(--bg-d);
@@ -115,6 +119,8 @@
         content: '';
         background: var(--bg-d);
         box-shadow: 0px 4px 21px var(--bg-d);
+        position: relative;
+        top: -2px;
       }
 
     }

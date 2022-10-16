@@ -12,6 +12,7 @@
 .connect-walet {
   display: flex;
   align-items: center;
+  justify-content: center;
   grid-gap: 10px;
   padding: clamp(6px, 0.855vw, 10px) clamp(8px, 2.906vw, 34px);
 
@@ -26,6 +27,29 @@
 
   border: 1.5px solid var(--bg-d);
   border-radius: 12px;
+
+  i {
+    font-style: normal;
+    margin-bottom: -1.5%;
+  }
+
+  &--mobile {
+    @include for-tablet {
+      display: none;
+    }
+    @include tablet {
+      position: absolute;
+      right: 54px;
+    }
+    @include small-tablet {
+      padding: 0;
+      width: 42px;
+      height: 42px;
+      i {
+        display: none;
+      }
+    }
+  }
 }
 
 .arrow-button {
@@ -47,6 +71,10 @@
     background: var(--bg-d);
     box-shadow: 0px 13px 21px rgba(130, 71, 229, 0.15);
     border-radius: 12px;
+
+    // i {
+    //   margin-bottom: -2%;
+    // }
 
     svg {
       fill: transparent;

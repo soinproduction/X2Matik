@@ -304,7 +304,6 @@
       line-height: 14px;
       text-transform: uppercase;
       color: var(--color-a);
-      margin-bottom: -.5%;
     }
   }
 
@@ -434,7 +433,6 @@
 
     i {
       font-style: normal;
-      margin-bottom: -1.5%;
     }
 
     &::before {
@@ -491,19 +489,6 @@
   }
 
 
-  &::before {
-
-    @include wave;
-    // width: 840px;
-    width: 120%;
-    bottom: -30px;
-    height: clamp(130px, 15.984vw, 203px);
-
-    @include mobile {
-      bottom: 0;
-    }
-  }
-
   // &::after {
   //   position: absolute;
   //   content: '';
@@ -535,7 +520,6 @@
 
     i {
       font-style: normal;
-      margin-bottom: -1.5%;
     }
   }
 
@@ -579,7 +563,6 @@
 
         i {
           font-style: normal;
-          margin-bottom: -2.5%;
         }
       }
     }
@@ -600,7 +583,7 @@
     height: clamp(62px, 6.22vw, 79px);
     width: 267px;
     border-radius: 25px;
-    margin: 13px auto clamp(78px, 7.48vw, 95px);
+    margin: 13px auto clamp(15px, 3.911vw, 30px);
     background: linear-gradient(180deg, #8247E5 0%, rgba(130, 71, 229, 0) 100%);
 
 

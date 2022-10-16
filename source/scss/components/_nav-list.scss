@@ -5,6 +5,10 @@
   width: 100%;
   grid-gap: 20px 0;
 
+  @include tablet {
+    display: none;
+  }
+
   &__link {
     font-family: var(--font-family);
     font-style: normal;
@@ -19,6 +23,7 @@
     &--telegram {
       color: var(--color-с);
       svg {
+        transform: translateY(-12%);
         flex-grow: 0;
         background: linear-gradient(180deg, #41BCE7 0%, #22A6DC 99.64%);
         border-radius: 50%;
