@@ -12,9 +12,9 @@
             <h2 class="main-top__title modal-title">
               calculator
             </h2>
-            <div class="main-top__subtitle modal-calculator__subtitle">
+            <p class="main-top__subtitle modal-calculator__subtitle">
               Enter the investment amount:
-            </div>
+            </p>
           </div>
 
           <div class="modal-calculator__coll">
@@ -54,81 +54,676 @@
             </ul>
           </div>
 
-          <div class="modal-calculator__box">
-            <ul class="modal-calculator__list">
-              <li class="modal-calculator__item">
-                <span class="modal-calculator__name">
-                  Total amount:
+          <div class="modal-calculator__left">
+
+            <div class="modal-calculator__image">
+              <picture>
+                <source type='image/webp' srcset='img/modal-image.webp'>
+                <img width='408' height='475' src='img/modal-image.png' alt='image'>
+              </picture>
+            </div>
+            <div class="modal-calculator__box">
+              <ul class="modal-calculator__list">
+                <li class="modal-calculator__item">
+                  <span class="modal-calculator__name">
+                    Total amount:
+                  </span>
+                  <span class="modal-calculator__value">
+                    <svg width='16' height='16'>
+                      <use href='img/sprite/sprite.svg#main-icon'></use>
+                    </svg>
+                    389.02 Matic
+                  </span>
+                </li>
+                <li class="modal-calculator__item">
+                  <span class="modal-calculator__name">
+                    Total return:
+                  </span>
+                  <span class="modal-calculator__value">
+                    200%
+                  </span>
+                </li>
+                <li class="modal-calculator__item">
+                  <span class="modal-calculator__name">
+                    Investment term:
+                  </span>
+                  <span class="modal-calculator__value">
+                    <svg width='16' height='16'>
+                      <use href='img/sprite/sprite.svg#main-icon'></use>
+                    </svg>
+                    10 days
+                  </span>
+                </li>
+              </ul>
+              <ul class="modal-calculator__list">
+                <li class="modal-calculator__item">
+                  <span class="modal-calculator__name">
+                    Per hour:
+                  </span>
+                  <span class="modal-calculator__value">
+                    <svg width='16' height='16'>
+                      <use href='img/sprite/sprite.svg#main-icon'></use>
+                    </svg>
+                    389.02 Matic
+                  </span>
+                </li>
+                <li class="modal-calculator__item">
+                  <span class="modal-calculator__name">
+                    Per Day:
+                  </span>
+                  <span class="modal-calculator__value">
+                    <svg width='16' height='16'>
+                      <use href='img/sprite/sprite.svg#main-icon'></use>
+                    </svg>
+                    389.02 Matic
+                  </span>
+                </li>
+                <li class="modal-calculator__item">
+                  <span class="modal-calculator__name">
+                    Per in 10 days:
+                  </span>
+                  <span class="modal-calculator__value">
+                    <svg width='16' height='16'>
+                      <use href='img/sprite/sprite.svg#main-icon'></use>
+                    </svg>
+                    389.02 Matic
+                  </span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+
+    <div class="modal" data-popup="withdrawls">
+        <div class="modal__box" role="dialog" aria-modal="true">
+          <button class="close modal__close" aria-label="Закрыть модальное окно">
+            <svg width="23" height="23">
+              <use href='img/sprite/sprite.svg#close'></use>
+            </svg>
+          </button>
+
+          <div class="modal-tables">
+            <div class="main-top ">
+              <h2 class="main-top__title modal-title">
+                withdrawls
+              </h2>
+              <div class="modal-tables__info">
+
+                <div class="modal-tables__icon">
+                  <picture>
+                    <source type='image/webp' srcset='img/metamask.webp'>
+                    <img width='30' height='30' src='img/metamask.png' alt='image'>
+                  </picture>
+                </div>
+                <span>
+                  0xb931...3ab8b5
                 </span>
-                <span class="modal-calculator__value">
-                  <svg width='16' height='16'>
-                    <use href='img/sprite/sprite.svg#main-icon'></use>
-                  </svg>
-                  389.02 Matic
+
+              </div>
+            </div>
+            <div class="modal-table">
+              <ul class="modal-table__list">
+                <li class="modal-table__list-item">
+                  Type:
+                </li>
+                <li class="modal-table__list-item">
+                  Date:
+                </li>
+                <li class="modal-table__list-item">
+                  Amount:
+                </li>
+                <li class="modal-table__list-item">
+                  Status:
+                </li>
+              </ul>
+
+              <ul class="table-list">
+                <li class="table-list__row">
+                  <span class="table-list__type">
+                    Deposit
+                  </span>
+
+                  <span class="table-list__date">
+                    12.08.2021 11:24
+                  </span>
+
+                  <span class="table-list__amount">
+                    <svg width='16' height='16'>
+                      <use href='img/sprite/sprite.svg#main-icon'></use>
+                    </svg>
+
+                    <i>
+                      389.02 Matic
+                    </i>
+
+                  </span>
+
+                  <span class="table-list__status ">
+                    complete
+                  </span>
+
+                </li>
+                <li class="table-list__row">
+                  <span class="table-list__type">
+                    withdraw
+                  </span>
+
+                  <span class="table-list__date">
+                    12.08.2021 11:24
+                  </span>
+
+                  <span class="table-list__amount">
+                    <svg width='16' height='16'>
+                      <use href='img/sprite/sprite.svg#main-icon'></use>
+                    </svg>
+
+                    <i>
+                      389.02 Matic
+                    </i>
+
+                  </span>
+
+                  <span class="table-list__status table-list__status--cancel">
+                    cancel
+                  </span>
+
+                </li>
+                <li class="table-list__row">
+                  <span class="table-list__type">
+                    Deposit
+                  </span>
+
+                  <span class="table-list__date">
+                    12.08.2021 11:24
+                  </span>
+
+                  <span class="table-list__amount">
+                    <svg width='16' height='16'>
+                      <use href='img/sprite/sprite.svg#main-icon'></use>
+                    </svg>
+
+                    <i>
+                      389.02 Matic
+                    </i>
+
+                  </span>
+
+                  <span class="table-list__status ">
+                    complete
+                  </span>
+
+                </li>
+                <li class="table-list__row">
+                  <span class="table-list__type">
+                    withdraw
+                  </span>
+
+                  <span class="table-list__date">
+                    12.08.2021 11:24
+                  </span>
+
+                  <span class="table-list__amount">
+                    <svg width='16' height='16'>
+                      <use href='img/sprite/sprite.svg#main-icon'></use>
+                    </svg>
+
+                    <i>
+                      389.02 Matic
+                    </i>
+
+                  </span>
+
+                  <span class="table-list__status table-list__status--cancel">
+                    cancel
+                  </span>
+
+                </li>
+                <li class="table-list__row">
+                  <span class="table-list__type">
+                    Deposit
+                  </span>
+
+                  <span class="table-list__date">
+                    12.08.2021 11:24
+                  </span>
+
+                  <span class="table-list__amount">
+                    <svg width='16' height='16'>
+                      <use href='img/sprite/sprite.svg#main-icon'></use>
+                    </svg>
+
+                    <i>
+                      389.02 Matic
+                    </i>
+
+                  </span>
+
+                  <span class="table-list__status ">
+                    complete
+                  </span>
+
+                </li>
+                <li class="table-list__row">
+                  <span class="table-list__type">
+                    withdraw
+                  </span>
+
+                  <span class="table-list__date">
+                    12.08.2021 11:24
+                  </span>
+
+                  <span class="table-list__amount">
+                    <svg width='16' height='16'>
+                      <use href='img/sprite/sprite.svg#main-icon'></use>
+                    </svg>
+
+                    <i>
+                      389.02 Matic
+                    </i>
+
+                  </span>
+
+                  <span class="table-list__status table-list__status--cancel">
+                    cancel
+                  </span>
+
+                </li>
+                <li class="table-list__row">
+                  <span class="table-list__type">
+                    Deposit
+                  </span>
+
+                  <span class="table-list__date">
+                    12.08.2021 11:24
+                  </span>
+
+                  <span class="table-list__amount">
+                    <svg width='16' height='16'>
+                      <use href='img/sprite/sprite.svg#main-icon'></use>
+                    </svg>
+
+                    <i>
+                      389.02 Matic
+                    </i>
+
+                  </span>
+
+                  <span class="table-list__status ">
+                    complete
+                  </span>
+
+                </li>
+
+
+
+
+              </ul>
+
+            </div>
+          </div>
+        </div>
+    </div>
+    <div class="modal" data-popup="referral">
+        <div class="modal__box" role="dialog" aria-modal="true">
+          <button class="close modal__close" aria-label="Закрыть модальное окно">
+            <svg width="23" height="23">
+              <use href='img/sprite/sprite.svg#close'></use>
+            </svg>
+          </button>
+
+          <div class="modal-tables">
+            <div class="main-top ">
+              <h2 class="main-top__title modal-title">
+                referral rewards
+              </h2>
+              <div class="modal-tables__info">
+
+                <div class="modal-tables__icon">
+                  <picture>
+                    <source type='image/webp' srcset='img/metamask.webp'>
+                    <img width='30' height='30' src='img/metamask.png' alt='image'>
+                  </picture>
+                </div>
+                <span>
+                  0xb931...3ab8b5
                 </span>
-              </li>
-              <li class="modal-calculator__item">
-                <span class="modal-calculator__name">
-                  Total return:
-                </span>
-                <span class="modal-calculator__value">
-                  200%
-                </span>
-              </li>
-              <li class="modal-calculator__item">
-                <span class="modal-calculator__name">
-                  Investment term:
-                </span>
-                <span class="modal-calculator__value">
-                  <svg width='16' height='16'>
-                    <use href='img/sprite/sprite.svg#main-icon'></use>
-                  </svg>
-                  10 days
-                </span>
-              </li>
-            </ul>
-            <ul class="modal-calculator__list">
-              <li class="modal-calculator__item">
-                <span class="modal-calculator__name">
-                  Per hour:
-                </span>
-                <span class="modal-calculator__value">
-                  <svg width='16' height='16'>
-                    <use href='img/sprite/sprite.svg#main-icon'></use>
-                  </svg>
-                  389.02 Matic
-                </span>
-              </li>
-              <li class="modal-calculator__item">
-                <span class="modal-calculator__name">
-                  Per Day:
-                </span>
-                <span class="modal-calculator__value">
-                  <svg width='16' height='16'>
-                    <use href='img/sprite/sprite.svg#main-icon'></use>
-                  </svg>
-                  389.02 Matic
-                </span>
-              </li>
-              <li class="modal-calculator__item">
-                <span class="modal-calculator__name">
-                  Per in 10 days:
-                </span>
-                <span class="modal-calculator__value">
-                  <svg width='16' height='16'>
-                    <use href='img/sprite/sprite.svg#main-icon'></use>
-                  </svg>
-                  389.02 Matic
-                </span>
-              </li>
-            </ul>
+
+              </div>
+            </div>
+            <div class="modal-table">
+              <ul class="modal-table__list">
+                <li class="modal-table__list-item">
+                  Level:
+                </li>
+                <li class="modal-table__list-item">
+                  User:
+                </li>
+                <li class="modal-table__list-item">
+                  Amount:
+                </li>
+                <li class="modal-table__list-item">
+                  Status:
+                </li>
+              </ul>
+
+              <ul class="table-list">
+                <li class="table-list__row">
+                  <span class="table-list__type">
+                    1 level
+                  </span>
+
+                  <span class="table-list__date">
+                    tJst.....CHKf
+                  </span>
+
+                  <span class="table-list__amount">
+                    <svg width='16' height='16'>
+                      <use href='img/sprite/sprite.svg#main-icon'></use>
+                    </svg>
+
+                    <i>
+                      389.02 Matic
+                    </i>
+
+                  </span>
+
+                  <span class="table-list__status ">
+                    complete
+                  </span>
+
+                </li>
+                <li class="table-list__row">
+                  <span class="table-list__type">
+                    2 level
+                  </span>
+
+                  <span class="table-list__date">
+                    tJst.....CHKf
+                  </span>
+
+                  <span class="table-list__amount">
+                    <svg width='16' height='16'>
+                      <use href='img/sprite/sprite.svg#main-icon'></use>
+                    </svg>
+
+                    <i>
+                      389.02 Matic
+                    </i>
+
+                  </span>
+
+                  <span class="table-list__status table-list__status--cancel">
+                    cancel
+                  </span>
+
+                </li>
+                <li class="table-list__row">
+                  <span class="table-list__type">
+                    1 level
+                  </span>
+
+                  <span class="table-list__date">
+                    tJst.....CHKf
+                  </span>
+
+                  <span class="table-list__amount">
+                    <svg width='16' height='16'>
+                      <use href='img/sprite/sprite.svg#main-icon'></use>
+                    </svg>
+
+                    <i>
+                      389.02 Matic
+                    </i>
+
+                  </span>
+
+                  <span class="table-list__status ">
+                    complete
+                  </span>
+
+                </li>
+                <li class="table-list__row">
+                  <span class="table-list__type">
+                    2 level
+                  </span>
+
+                  <span class="table-list__date">
+                    tJst.....CHKf
+                  </span>
+
+                  <span class="table-list__amount">
+                    <svg width='16' height='16'>
+                      <use href='img/sprite/sprite.svg#main-icon'></use>
+                    </svg>
+
+                    <i>
+                      389.02 Matic
+                    </i>
+
+                  </span>
+
+                  <span class="table-list__status table-list__status--cancel">
+                    cancel
+                  </span>
+
+                </li>
+                <li class="table-list__row">
+                  <span class="table-list__type">
+                    1 level
+                  </span>
+
+                  <span class="table-list__date">
+                    tJst.....CHKf
+                  </span>
+
+                  <span class="table-list__amount">
+                    <svg width='16' height='16'>
+                      <use href='img/sprite/sprite.svg#main-icon'></use>
+                    </svg>
+
+                    <i>
+                      389.02 Matic
+                    </i>
+
+                  </span>
+
+                  <span class="table-list__status ">
+                    complete
+                  </span>
+
+                </li>
+                <li class="table-list__row">
+                  <span class="table-list__type">
+                    2 level
+                  </span>
+
+                  <span class="table-list__date">
+                    tJst.....CHKf
+                  </span>
+
+                  <span class="table-list__amount">
+                    <svg width='16' height='16'>
+                      <use href='img/sprite/sprite.svg#main-icon'></use>
+                    </svg>
+
+                    <i>
+                      389.02 Matic
+                    </i>
+
+                  </span>
+
+                  <span class="table-list__status table-list__status--cancel">
+                    cancel
+                  </span>
+
+                </li>
+              </ul>
+
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <div class="modal" data-popup="promo">
+      <div class="modal__box" role="dialog" aria-modal="true">
+        <button class="close modal__close" aria-label="Закрыть модальное окно">
+          <svg width="23" height="23">
+            <use href='img/sprite/sprite.svg#close'></use>
+          </svg>
+        </button>
+        <div class="modal-promo">
+          <div class="main-top ">
+            <h2 class="main-top__title modal-title">
+              promo material
+            </h2>
           </div>
 
+          <div class="modal-promo__inner">
+            <ul class="checkbox-list">
+              <li class="checkbox-list__item">
+                <label class="custom-radio">
+                  <input type="radio" class="custom-radio__field" name="size" value="125x125" checked>
+                  <span class="custom-radio__content">125х125</span>
+                </label>
+              </li>
+              <li class="checkbox-list__item">
+                <label class="custom-radio">
+                  <input type="radio" class="custom-radio__field" name="size" value="240х400">
+                  <span class="custom-radio__content">240х400</span>
+                </label>
+              </li>
+              <li class="checkbox-list__item">
+                <label class="custom-radio">
+                  <input type="radio" class="custom-radio__field" name="size" value="300х300">
+                  <span class="custom-radio__content">300х300</span>
+                </label>
+              </li>
+              <li class="checkbox-list__item">
+                <label class="custom-radio">
+                  <input type="radio" class="custom-radio__field" name="size" value="486">
+                  <span class="custom-radio__content">486х600</span>
+                </label>
+              </li>
+              <li class="checkbox-list__item">
+                <label class="custom-radio">
+                  <input type="radio" class="custom-radio__field" name="size" value="728х900">
+                  <span class="custom-radio__content">728х900</span>
+                </label>
+              </li>
+            </ul>
+            <div class="modal-promo__mid">
+              <div class="modal-promo__image">
+                <picture>
+                  <source type='image/webp' srcset='img/promo.webp'>
+                  <img width='125' height='125' src='img/promo.png' alt='image'>
+                </picture>
+              </div>
 
+              <span class="modal-promo__descr">
+                your link to banner 125X125
+              </span>
+
+            </div>
+
+            <div class="modal-promo__buffer buffer">
+              <input class="buffer__input" type="text" value="<ahref=https^////x2tron.pro///referal=../wvrwiveGnnvdnvsdnsnvd...">
+              <button class="buffer__button">
+                <i>
+                  Copy link
+                </i>
+                <svg width='20' height='20'>
+                  <use href='img/sprite/sprite.svg#copy'></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+
+  <div class="modal" data-popup="start">
+    <div class="modal__box" role="dialog" aria-modal="true">
+      <button class="close modal__close" aria-label="Закрыть модальное окно">
+        <svg width="23" height="23">
+          <use href='img/sprite/sprite.svg#close'></use>
+        </svg>
+      </button>
+
+      <div class="time-modal">
+
+        <div class="time-modal__image time-modal__image--left">
+          <picture>
+            <source type='image/webp' srcset='img/modal-left.webp'>
+            <img width='143' height='142' src='img/modal-left.png' alt='image'>
+          </picture>
+        </div>
+        <div class="time-modal__image time-modal__image--right">
+          <picture>
+            <source type='image/webp' srcset='img/modal-right.webp'>
+            <img width='143' height='142' src='img/modal-right.png' alt='image'>
+          </picture>
+        </div>
+
+        <div class="main-top ">
+          <h2 class="main-top__title modal-title">
+            Time pool
+          </h2>
+          <p class="main-top__subtitle">
+            If thete are no purchases of miners in the  amount of $1 or more within an hour after you, then the entire miners amount will automaticakky be credited be credited to your account. 3% of each purchase of INVERTEX Miners if transferred to TIME POOL.
+          </p>
+        </div>
+
+        <div class="time-modal__inner">
+          <div class="time-modal__value">
+            <svg width='40' height='40'>
+              <use href='img/sprite/sprite.svg#coin'></use>
+            </svg>
+
+            <i>
+              903.55 USD
+            </i>
+
+          </div>
+
+          <span class="time-modal__timer">
+            00:10:18
+          </span>
+
+          <div class="time-modal__bottom">
+            <span class="time-modal__bottom-info">
+              Last purchase was by:
+            </span>
+
+            <div class="time-modal__bottom-val">
+              RosyFinance -
+
+              <div class="time-modal__value">
+                <svg width='24' height='24'>
+                  <use href='img/sprite/sprite.svg#coin'></use>
+                </svg>
+                <i>
+                  903.55 USD
+                </i>
+              </div>
+
+            </div>
+
+          </div>
         </div>
 
       </div>
-  </div>
+    </div>
 </div>
+
+</div>
+
+
+
+
+
+
+
 
 

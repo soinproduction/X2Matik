@@ -9,6 +9,7 @@ export default {
   modalsButton: [...document.querySelectorAll("[data-btn-modal]")],
   header: document.querySelector("header"),
   card: document.querySelector(".investments-now"),
+  rowItem: document.querySelectorAll(".table-list .table-list__row")[0],
 
 }
 

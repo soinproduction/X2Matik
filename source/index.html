@@ -66,10 +66,10 @@
 
             <div class="smart__buttons">
               <button class="smart__button smart__button--transparent"
-              data-btn-modal="calculator" aria-label="Закрыть модальное окно">
+              data-btn-modal="calculator" aria-label="Открыть модальное окно">
                 Calculator
               </button>
-              <button class="smart__button">
+              <button class="smart__button" data-btn-modal="start" aria-label="Открыть модальное окно">
                 Start now
               </button>
             </div>
@@ -180,10 +180,9 @@
                 </span>
               </li>
             </ul>
-
-            <a href="#" class="investments__link">
+            <button data-btn-modal="withdrawls" aria-label="Открыть модальное окно" class="investments__link">
               Withdrawals
-            </a>
+            </button>
 
             <div class="investments__settings-wrapper">
               <span class="investments__settings-name">Active investments</span>
@@ -407,7 +406,7 @@
                     </svg>
                   </button>
                 </div>
-                <button class="referral__promo">
+                <button class="referral__promo" data-btn-modal="promo" aria-label="Открыть модальное окно">
                   promo tools
                 </button>
               </div>
@@ -501,7 +500,7 @@
                       </li>
                     </ul>
 
-                    <button class="arrow-button">
+                    <button class="arrow-button" data-btn-modal="withdrawls" aria-label="Открыть модальное окно">
                       withdraw
 
                       <svg width='24' height='24'>
@@ -515,7 +514,7 @@
             </div>
           </div>
 
-          <button class="referral__button">
+          <button class="referral__button" data-btn-modal="referral" aria-label="Открыть модальное окно">
             <svg width='24' height='24'>
               <use href='img/sprite/sprite.svg#ref'></use>
             </svg>

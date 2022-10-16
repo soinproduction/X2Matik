@@ -248,6 +248,10 @@ input[type="number"] {
     // display: none;
     cursor: pointer;
 
+    @include small-tablet {
+      display: none;
+    }
+
   }
 
   &::-webkit-scrollbar-thumb {
