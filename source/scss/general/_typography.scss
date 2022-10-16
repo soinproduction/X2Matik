@@ -32,14 +32,25 @@
     font-style: normal;
   }
 
-  &--mobile {
-    @include for-tablet {
+  @include tablet {
+    padding: 0;
+    width: 42px;
+    height: 42px;
+    i {
       display: none;
     }
-    @include tablet {
+  }
+
+  &--mobile {
+    @include for-small-tablet {
+      display: none;
+    }
+
+    @include small-tablet {
       position: absolute;
       right: 54px;
     }
+
     @include small-tablet {
       padding: 0;
       width: 42px;

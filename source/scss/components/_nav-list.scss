@@ -6,6 +6,12 @@
   grid-gap: 20px 0;
 
   @include tablet {
+    grid-gap: 25px;
+    justify-content: initial;
+    width: fit-content;
+  }
+
+  @include small-tablet {
     display: none;
   }
 

@@ -37,9 +37,13 @@ header {
   align-items: center;
   grid-gap: 30px;
 
-  @include tablet {
+  @include small-tablet {
     grid-template-columns: auto auto 24px;
     justify-content: space-between;
+  }
+
+  @include tablet {
+    grid-gap: 20px;
   }
 
 }

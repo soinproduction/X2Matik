@@ -4,4 +4,9 @@
   align-items: center;
   grid-gap: 0 clamp(20px, 5.983vw, 70px);
   flex-shrink: 0;
+
+  @include tablet {
+    grid-gap: 20px;
+    justify-content: space-between;
+  }
 }
