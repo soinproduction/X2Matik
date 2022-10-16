@@ -4,27 +4,31 @@ import { enableScroll } from '../functions/enable-scroll';
 import { removeClassInArray,addCustomClass, removeCustomClass } from "../functions/customFunctions";
 
 const {overlay, activeClass, modalsButton , modals} = vars;
-
+let innerButton;
 const commonFunction = function() {
   removeCustomClass(overlay, activeClass);
   removeClassInArray(modals, activeClass);
   enableScroll();
 }
 
+
+
 function buttonClickHandler(e,buttonAttribute, activeClass) {
   e.preventDefault();
   const currentModalId = e.target.getAttribute(`${buttonAttribute}`);
   const curentModal = overlay.querySelector(`[data-popup="${currentModalId}"]`);
 
+
   addCustomClass(overlay, activeClass);
   addCustomClass(curentModal, activeClass);
   disableScroll();
+  innerButton = overlay.querySelector(`${'[data-popup]'}.${activeClass} .close`);
 }
 
+
+
 function overlayClickHandler(e, activeClass){
-  const closeBtn = overlay.querySelector(`${'[data-popup]'}.${activeClass} .close`)
-  closeBtn && closeBtn.addEventListener('click', commonFunction);
-  if (e.target === overlay) commonFunction();
+  if (e.target === overlay || e.target === innerButton) commonFunction();
 }
 
 function modalInit(buttonsArray, buttonAttribute ,activeClass) {
@@ -33,7 +37,7 @@ function modalInit(buttonsArray, buttonAttribute ,activeClass) {
   })
 }
 
-overlay?.addEventListener('click', (e) => overlayClickHandler(e, activeClass));
+overlay.addEventListener('click', function(e){overlayClickHandler(e, activeClass)});
 modalInit(modalsButton, "data-btn-modal", activeClass);
 
 

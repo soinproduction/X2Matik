@@ -26,4 +26,10 @@
   @include for-laptop {
     left: 30px;
   }
+
+  .select__body {
+    transform: translate(-50%, -150%);
+  }
+
+
 }

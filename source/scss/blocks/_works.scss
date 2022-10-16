@@ -40,5 +40,9 @@
     flex-direction: column;
     align-items: center;
     grid-gap: clamp(30px, 5.128vw, 60px);
+
+    .main-top__subtitle {
+      line-height: 156%;
+    }
   }
 }

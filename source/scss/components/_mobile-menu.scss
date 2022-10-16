@@ -1,4 +1,13 @@
 .burger {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 42px;
+  height: 42px;
+  background: var(--bg-d);
+  border-radius: 12px;
+
+
   @include for-tablet {
     display: none;
   }

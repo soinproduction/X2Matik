@@ -314,4 +314,8 @@ fieldset {
 
     pointer-events: initial;
   }
+
+  .close svg {
+    pointer-events: none;
+  }
 }

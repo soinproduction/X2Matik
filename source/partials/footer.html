@@ -1,12 +1,13 @@
 <footer>
   <div class="container">
     <div class="footer">
+      <button class="burger">
+        <svg width='16' height='9'>
+          <use href='img/sprite/sprite.svg#burger'></use>
+        </svg>
+      </button>
+
       <nav class="main-nav">
-        <button class="burger">
-          <svg width='16' height='9'>
-            <use href='img/sprite/sprite.svg#burger'></use>
-          </svg>
-        </button>
         <ul class="nav-list">
           <li class="nav-list__item">
             <a href="#investments" class="nav-list__link" data-scroll>
@@ -14,7 +15,7 @@
             </a>
           </li>
           <li class="nav-list__item">
-            <a href="#" class="nav-list__link">
+            <a href="#works" class="nav-list__link">
               How it works
             </a>
           </li>
@@ -42,7 +43,7 @@
 
         <ul class="nav-list">
           <li class="nav-list__item">
-            <a href="#" class="nav-list__link">
+            <a href="#referral" class="nav-list__link">
               Referrals
             </a>
           </li>
@@ -53,10 +54,12 @@
           </li>
           <li class="nav-list__item">
             <button class="connect-walet">
-              <svg width='23' height='23'>
-                <use href='img/sprite/sprite.svg#metamask'></use>
-              </svg>
-              Connect wallet
+              <picture>
+                <source type='image/webp' srcset='img/metamask.webp'>
+                <img width='30' height='30' src='img/metamask.png' alt='image'>
+              </picture>
+
+              <i>Connect wallet</i>
             </button>
           </li>
         </ul>
@@ -84,9 +87,24 @@
                 <img width='24' height='24' src='img/lang.png' alt='lang'>
               </picture>
             </li>
+            <li class='select__item' data-choice='choosen'>
+              <picture>
+                <source type='image/webp' srcset='img/lang.webp'>
+                <img width='24' height='24' src='img/lang.png' alt='lang'>
+              </picture>
+            </li>
           </ul>
         </div>
       </div>
+
+      <button class="connect-walet connect-walet--mobile">
+        <picture>
+          <source type='image/webp' srcset='img/metamask.webp'>
+          <img width='30' height='30' src='img/metamask.png' alt='image'>
+        </picture>
+
+        <i>Connect wallet</i>
+      </button>
     </div>
 
 

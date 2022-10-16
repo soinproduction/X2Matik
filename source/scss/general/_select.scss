@@ -57,26 +57,25 @@
 }
 
 .select__body {
-  border-radius: 30px !important;
+  border-radius: 12px !important;
   position: absolute;
-  right: 0;
-  left: 0;
+  left: 50%;
+  transform: translateX(-50%);
   z-index: 5;
 
   display: none;
-  width: 100%;
+  // width: 100%;
   max-height: 0;
   margin-top: 10px;
   padding: 0;
-  overflow: hidden;
+
 
   border-top: none;
   border-radius: 0 0 2px 2px;
-  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
 }
 
 .select__item {
-  width: 100%;
+  width: 24px;
   margin: 0 auto;
   font-style: normal;
   font-weight: 400;
@@ -86,9 +85,10 @@
   color: var(--color-f);
   text-transform: capitalize;
   letter-spacing: 0.05em;
+  display: flex;
 
   cursor: pointer;
-  opacity: 0.5;
+  // opacity: 0.5;
 
   transition: all 0.4s;
 
@@ -102,13 +102,12 @@
 .select__wrapp {
   display: flex;
   flex-direction: column;
-  width: 100%;
-  padding: 12px 18px 10px !important;
-
-  background: var(--color-d);
-  border: 1px solid  var(--color-e);
-
-  grid-gap: 8px;
+  width: calc(100% );
+  background: var(--bg-g);
+  border: 1px solid  var(--bg-d);
+  border-radius: 12px;
+  grid-gap: 10px;
+  padding: 5px;
 }
 
 .select__item:hover {

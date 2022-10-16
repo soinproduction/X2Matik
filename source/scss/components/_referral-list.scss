@@ -40,15 +40,14 @@
 
       &::after {
         border-radius: 20px;
-        width: 100%;
         pointer-events: none;
         height: 100%;
         background: linear-gradient(0deg, rgba(130, 71, 229, 0.54) 18%, rgba(130, 71, 229, 0) 45.21%);
         position: absolute;
         content: '';
-        left: 0;
-        bottom: 0;
-        right: 0;
+        left: -2px;
+        bottom: -2px;
+        right: -2px;
         background-size: 100% 100%;
         z-index: -1;
       }
