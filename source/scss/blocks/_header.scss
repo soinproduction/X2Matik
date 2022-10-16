@@ -4,6 +4,7 @@ header {
   width: 100%;
   left: 0;
   padding: clamp(20px, 2.222vw, 26px) 0;
+  z-index: 50;
 
   &::before {
     width: 400px;

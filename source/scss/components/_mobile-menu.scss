@@ -8,14 +8,35 @@
   border-radius: 12px;
 
 
+
   @include for-small-tablet {
     display: none;
   }
 }
 
+@keyframes animateIn {
+  0% {
+    opacity: 0;
+    transform: translateX(10px) rotate(2deg);
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.fixed-body {
+  position: fixed;
+  overflow: hidden;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
 
 .mobile-menu {
   position: fixed;
+  overflow-y: auto;
+  z-index: 100;
   left: 0;
   right: 0;
   top: 0;
@@ -23,10 +44,33 @@
   background: #2F1A4E;
   z-index: 20;
 
+  .burger {
+    transform: scaleX(-1);
+  }
+
+  filter: blur(7px);
+  clip-path: circle(0% at 96.5% 5%);
+  transition: all .7s cubic-bezier(0.23, 0.93, 0.23, 0.93);
+
+  .smart__list {
+    display: flex;
+    position: initial;
+    transform: initial;
+    left: initial;
+    margin: 0 auto;
+    max-width: 500px;
+  }
+
+  &.active {
+    filter: blur(0px);
+    clip-path: circle(140% at 96.5% 5%);
+    transition: all .6s cubic-bezier(0.23, 0.93, 0.6, 0.93);
+  }
+
 
 
   &__top {
-    padding: 27px 26px 38px;
+    padding: 27px 16px 38px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -60,9 +104,26 @@
 
   &__inner {
     padding: 40px 26px 20px;
-    background: linear-gradient(180deg, rgba(130, 71, 229, 0.54) 0%, rgba(130, 71, 229, 0) 52.21%);
-    border-top: 1px solid #8247E5;
-    border-radius: 20px 20px 0px 0px;
+    height: 500px;
+
+    z-index: 0;
+    position: relative;
+
+    &::before {
+      top: 0px;
+      left: -1px;
+      right: -1px;
+      bottom: 0;
+      height: 100%;
+      content: '';
+      position: absolute;
+      z-index: -1;
+      background-image: url(../img/mobile-bg.png);
+      border-top: 2px solid #8247E5;
+      border-radius: 20px 20px 0px 0px;
+      background-size: 100% 130%;
+      background-position: top;
+    }
   }
 
   &__list {
@@ -122,6 +183,7 @@
     grid-template-columns: 2fr 1fr;
     grid-gap: 12px;
     justify-items: center;
+    margin-bottom: 100px;
 
     .select {
       right: initial !important;
@@ -173,6 +235,14 @@
       grid-gap: 8px;
       width: 100%;
     }
+  }
+
+  .info-list__value {
+    font-size: 18px !important;
+  }
+
+  .info-list__name {
+    font-size: 14px !important;
   }
 
   @include for-small-tablet {
