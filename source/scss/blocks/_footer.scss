@@ -9,27 +9,42 @@ footer {
 .footer {
   position: relative;
   z-index: 40;
+
   display: grid;
-  grid-template-columns: 1fr auto;
   align-items: center;
+
   grid-gap: 30px;
+  grid-template-columns: 1fr auto;
+  @include small-tablet {
+    justify-content: space-between;
+
+    grid-template-columns: auto auto 24px;
+  }
+  @include tablet {
+    grid-gap: 20px;
+  }
+  @include for-laptop {
+    left: 30px;
+  }
 
 
   &::before {
+    content: "";
+    position: absolute;
+    bottom: calc(Min(1.575vw, 20px) * -1);
+    left: 50%;
+    z-index: -1;
+
     width: 800px;
     height: 100%;
-    border-radius: 50%;
-    content: '';
+
     background: url(../img/footer.png);
-    position: absolute;
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100% 100%;
-    z-index: -1;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: calc(Min(1.575vw, 20px) * -1);
+    border-radius: 50%;
     border-radius: 50% 50% 0 0;
+    transform: translateX(-50%);
   }
 
   .connect-walet--mobile {
@@ -43,24 +58,7 @@ footer {
     }
   }
 
-  @include small-tablet {
-    grid-template-columns: auto auto 24px;
-    justify-content: space-between;
-  }
-
-  @include tablet {
-    grid-gap: 20px;
-  }
-
-
-
-  @include for-laptop {
-    left: 30px;
-  }
-
   .select__body {
     transform: translate(-50%, -150%);
   }
-
-
 }

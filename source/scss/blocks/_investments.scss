@@ -1,20 +1,25 @@
 .investments {
-  padding: 32px 0 clamp(40px, 6.41vw, 75px);
   position: relative;
 
+  padding: 32px 0 clamp(40px, 6.41vw, 75px);
+
   &::after {
-    @include round;
     top: 50%;
     left: calc((452px - 84px) * -1);
-    transform: translateY(-50%);
     z-index: -2;
+
+    transform: translateY(-50%);
+
+    @include round;
   }
   &::before {
-    @include round;
     top: 50%;
     right: calc((452px - 84px) * -1);
-    transform: translateY(-50%);
     z-index: -2;
+
+    transform: translateY(-50%);
+
+    @include round;
   }
 
 
@@ -23,92 +28,101 @@
   }
 
   &__list {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(172px, auto));
-    padding: clamp(30px, 31px, 31px) clamp(20px, 4.274vw, 50px);
-    grid-gap: 30px Min(5.128vw, 60px);
-    border-radius: clamp(18px,1.709vw, 20px);
     position: relative;
     z-index: 0;
+
+    display: grid;
     margin-bottom: 16px;
+    padding: clamp(30px, 31px, 31px) clamp(20px, 4.274vw, 50px);
+
+    border-radius: clamp(18px,1.709vw, 20px);
+
+    grid-gap: 30px Min(5.128vw, 60px);
+    grid-template-columns: repeat(4, minmax(172px, auto));
+    @include tablet {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include mobile {
+      margin-bottom: 20px;
+
+      grid-template-columns: 100%;
+    }
 
     &::before {
       content: "";
-      z-index: -2;
       position: absolute;
       top: -2px;
       right: -2px;
       bottom: -2px;
       left: -2px;
-      background: linear-gradient(90.32deg, #8247E5 1.21%, rgba(130, 71, 229, 0) 99.77%);
+      z-index: -2;
+
+      background: linear-gradient(90.32deg, #8247e5 1.21%, rgba(130, 71, 229, 0) 99.77%);
       border-radius: inherit;
+
       pointer-events: none;
     }
 
     &:after {
-      pointer-events: none;
       content: "";
-      z-index: -1;
       position: absolute;
       top: 0;
       right: 0;
       bottom: 0;
       left: 0;
-      background:  #08040E linear-gradient(270deg, #1D0F32 0%, rgba(29, 15, 50, 0) 89.47%);
+      z-index: -1;
+
+      background: #08040e linear-gradient(270deg, #1d0f32 0%, rgba(29, 15, 50, 0) 89.47%);
       border-radius: inherit;
+
+      pointer-events: none;
     }
 
     &-item {
       position: relative;
 
-      &:first-child {
-        .info-list__value {
-          color: var(--color-e);
-        }
-      }
-
-      .info-list__value {
-        flex-grow: 1;
-        align-content: center;
-      }
-
       @include for-tablet {
         &:not(:first-child) {
           &::before {
-            height: 120%;
-            width: 3px;
-            top: 50%;
-            transform: translateY(-50%);
-            content: '';
+            content: "";
             position: absolute;
-            background: linear-gradient(270deg, #502B8C 0%, rgba(80, 43, 140, 0) 101.76%);
+            top: 50%;
             left: calc((Min(5.128vw, 60px) / 2 )* -1);
+
+            width: 3px;
+            height: 120%;
+
+            background: linear-gradient(270deg, #502b8c 0%, rgba(80, 43, 140, 0) 101.76%);
+            transform: translateY(-50%);
           }
         }
       }
-
       @include tablet {
         &:nth-child(odd) {
           &::before {
-            height: 100%;
-            width: 2px;
-            top: 50%;
-            transform: translateY(-50%);
-            content: '';
+            content: "";
             position: absolute;
-            background: linear-gradient(270deg, #502B8C 0%, rgba(80, 43, 140, 0) 101.76%);
+            top: 50%;
             right: calc((Min(5.128vw, 60px) / 1.7 )* -1);
+
+            width: 2px;
+            height: 100%;
+
+            background: linear-gradient(270deg, #502b8c 0%, rgba(80, 43, 140, 0) 101.76%);
+            transform: translateY(-50%);
           }
         }
 
         &::after {
-          height: 1px;
-          width: 100%;
-          top: -15px;
-          content: '';
+          content: "";
           position: absolute;
-          background: linear-gradient(270deg, #502B8C 0%, rgba(80, 43, 140, 0) 101.76%);
+          top: -15px;
           left: 0;
+
+          width: 100%;
+          height: 1px;
+
+          background: linear-gradient(270deg, #502b8c 0%, rgba(80, 43, 140, 0) 101.76%);
         }
 
         &:nth-child(1),
@@ -118,7 +132,6 @@
           }
         }
       }
-
       @include mobile {
         &:nth-child(odd) {
           &::before {
@@ -132,118 +145,124 @@
           }
         }
       }
-    }
 
-    @include tablet {
-      grid-template-columns: repeat(2, 1fr);
-    }
+      &:first-child {
+        .info-list__value {
+          color: var(--color-e);
+        }
+      }
 
-    @include mobile {
-      grid-template-columns: 100%;
-      margin-bottom: 20px;
+      .info-list__value {
+        flex-grow: 1;
+        align-content: center;
+      }
     }
-
   }
 
 
   &__settings {
     display: flex;
     align-items: center;
-    grid-gap: 20px clamp(20px, 3.846vw, 45px);
-    padding: 30px;
-    background: linear-gradient(270deg, #1D0F32 0%, rgba(29, 15, 50, 0) 100%);
-    border-radius: 20px;
     margin-bottom: clamp(40px, 4.957vw, 58px);
+    padding: 30px;
 
+    background: linear-gradient(270deg, #1d0f32 0%, rgba(29, 15, 50, 0) 100%);
+    border-radius: 20px;
+
+    grid-gap: 20px clamp(20px, 3.846vw, 45px);
     @include small-tablet {
       display: grid;
       justify-content: space-between;
+
       grid-template-columns: auto auto;
     }
-
     @include mobile {
-      grid-template-columns: 100%;
-      justify-items: center;
       width: 100%;
       padding: 0;
+
       background: transparent;
+
+      grid-template-columns: 100%;
+      justify-items: center;
     }
 
     &-list {
       display: flex;
       align-items: center;
-      grid-gap: 20px clamp(20px, 3.846vw, 45px);
 
+      grid-gap: 20px clamp(20px, 3.846vw, 45px);
       @include mobile {
-        padding: 34px clamp(15px, 6.250vw, 24px);
-        background: linear-gradient(270deg, #1D0F32 0%, rgba(29, 15, 50, 0) 100%);
-        border-radius: 18px;
-        width: 100%;
         justify-content: center;
+        width: 100%;
+        padding: 34px clamp(15px, 6.250vw, 24px);
+
+        background: linear-gradient(270deg, #1d0f32 0%, rgba(29, 15, 50, 0) 100%);
+        border-radius: 18px;
+
         grid-gap: clamp(20px, 6.077vw, 57px);
       }
     }
 
     &-wrapper {
       display: flex;
-      align-items: center;
-      justify-content: flex-end;
-      grid-gap: 15px;
-      flex-shrink: 0;
       flex-grow: 1;
+      flex-shrink: 0;
+      justify-content: flex-end;
+      align-items: center;
       margin-left: auto;
 
+      grid-gap: 15px;
       @include small-tablet {
-        margin: initial;
-        grid-column: 1/span 2;
         justify-content: flex-start;
+        margin: initial;
+
+        grid-column: 1/span 2;
       }
-
       @include mobile {
-        grid-column: 1;
-        width: 100%;
         justify-content: center;
-
+        width: 100%;
         padding: 34px 0;
-        background: linear-gradient(270deg, #1D0F32 0%, rgba(29, 15, 50, 0) 100%);
+
+        background: linear-gradient(270deg, #1d0f32 0%, rgba(29, 15, 50, 0) 100%);
         border-radius: 18px;
+
+        grid-column: 1;
       }
     }
 
     &-item {
-      font-family: var(--font-family);
       font-style: normal;
       font-weight: 500;
       font-size: clamp(14px, 4.375vw, 16px);
       line-height: 100%;
+      font-family: var(--font-family);
       color: var(--color-a);
     }
 
     &-name {
-      font-family: var(--font-family);
       font-style: normal;
       font-weight: 500;
       font-size: 14px;
       line-height: 14px;
-      color: var(--color-a);
+      font-family: var(--font-family);
       text-align: center;
+      color: var(--color-a);
     }
   }
 
   &__link {
-    font-family: var(--font-family);
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
     line-height: 16px;
-    text-decoration-line: underline;
-
+    font-family: var(--font-family);
     color: var(--color-e);
 
-    transition: all .4s;
+    transition: all 0.4s;
+
+    text-decoration-line: underline;
     &:hover {
       color: #ccaefd;
     }
-
   }
 }

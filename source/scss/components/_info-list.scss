@@ -1,31 +1,34 @@
 .info-list {
-
   &__item {
     display: flex;
     flex-direction: column;
+
     grid-gap: 9px;
   }
 
   &__name {
-    font-family: var(--font-family);
+    position: relative;
+
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
     line-height: 100%;
+    font-family: var(--font-family);
     color: var(--color-a);
-    position: relative;
   }
 
   &__value {
-    font-family: var(--font-family);
+    display: flex;
+    align-items: center;
+
     font-style: normal;
     font-weight: 700;
     font-size: clamp(18px, 1.795vw, 21px);
     line-height: 100%;
-    text-transform: uppercase;
+    font-family: var(--font-family);
     color: var(--color-a);
-    display: flex;
-    align-items: center;
+    text-transform: uppercase;
+
     grid-gap: 14px;
   }
 }

@@ -3,7 +3,6 @@ const parrent = [...document.querySelectorAll('.buffer')];
 function copyFunction(textInput) {
   textInput.select();
   document.execCommand("copy");
-  // alert("Copied the text: " + textInput.value);
 }
 
 parrent.map(function(item){

@@ -1,46 +1,51 @@
 /* stylelint-disable */
 
 @mixin round {
+  content: "";
+  position: absolute;
+  z-index: -1;
+
   width: clamp(300px, 52.151vw, 400px);
   height: clamp(300px, 52.151vw, 400px);
-  border-radius: 50%;
-  content: '';
+
   background: var(--bg-d);
-  filter: blur(Min(10.94vw, 128px));
-  position: absolute;
   background-repeat: no-repeat;
   background-position: center;
-  z-index: -1;
+  border-radius: 50%;
+  filter: blur(Min(10.94vw, 128px));
 }
 
 @mixin wave {
+  content: "";
   position: absolute;
+  z-index: -1;
+
   width: 100%;
   height: Min(400px, 24.238vw);
+
   background-image: var(--wave);
+  background-repeat: no-repeat;
   background-position: center;
   background-size: 100% 100%;
-  background-repeat: no-repeat;
-  content: '';
-  z-index: -1;
+
   pointer-events: none;
 }
 
 @mixin dfc {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
 }
 
 @mixin dfcs {
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
 }
 
 @mixin psevdo {
+  content: "";
   position: absolute;
-  content: '';
 }
 
 @mixin bg_position {
@@ -65,40 +70,41 @@ $test: 16px;
   background-image: url("#{$pathToImage}.png");
   /* stylelint-disable-next-line declaration-block-no-duplicate-properties */
   background-image: image-set(
-    /* stylelint-disable-next-line function-comma-newline-after */
-    /* "#{$pathToImage}.avif"type("image/avif") */
-    "#{$pathToImage}.webp"type("image/webp"),
-    "#{$pathToImage}.png"type("image/png")
+  /* stylelint-disable-next-line function-comma-newline-after */
+  /* "#{$pathToImage}.avif"type("image/avif") */
+  "#{$pathToImage}.webp"type("image/webp"),
+  "#{$pathToImage}.png"type("image/png")
   );
 }
 
 @mixin footerToBottom {
   display: grid;
+  min-height: 100vh;
+
   grid-template-columns: 100%;
   grid-template-rows: auto 1fr auto;
-  min-height: 100vh;
 }
 
 @mixin mr($value) {
-    &:not(:last-child) {
-        margin-right: $value;
-    }
+  &:not(:last-child) {
+    margin-right: $value;
+  }
 }
 
 @mixin ml($value) {
-    &:not(:last-child) {
-        margin-left: $value;
-    }
+  &:not(:last-child) {
+    margin-left: $value;
+  }
 }
 
 @mixin mb($value) {
-    &:not(:last-child) {
-        margin-bottom: $value;
-    }
+  &:not(:last-child) {
+    margin-bottom: $value;
+  }
 }
 
 @mixin mt($value) {
-    &:not(:last-child) {
-        margin-top: $value;
-    }
+  &:not(:last-child) {
+    margin-top: $value;
+  }
 }

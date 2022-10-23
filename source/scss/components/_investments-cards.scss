@@ -1,21 +1,21 @@
 .investments-cards {
   display: grid;
-  grid-template-columns: repeat(4,1fr);
   align-items: stretch;
-  grid-gap: 30px Min(1.709vw, 20px);
 
+  grid-gap: 30px Min(1.709vw, 20px);
+  grid-template-columns: repeat(4,1fr);
   @include tablet {
-    grid-template-columns: repeat(2,1fr);
     max-width: 767px;
     margin: 0 auto;
+
     grid-gap: 30px 20px;
+    grid-template-columns: repeat(2,1fr);
   }
-
   @include mobile {
-    grid-template-columns: 100%;
     max-width: 414px;
-  }
 
+    grid-template-columns: 100%;
+  }
 }
 
 video {
@@ -25,36 +25,40 @@ video {
 .investments-form {
   display: flex;
   flex-direction: column;
+
   grid-gap: clamp(16px, 1.709vw, 20px);
 
   &__label {
+    position: relative;
+
     width: 100%;
     height: 55px;
-    position: relative;
+
     background: var(--bg-g);
     border-radius: 12px;
 
     input {
-      height: 100%;
       width: 100%;
-      background: transparent;
-      border-radius: 12px;
+      height: 100%;
 
-      font-family: var(--font-family);
       font-style: normal;
       font-weight: 500;
       font-size: 16px;
       line-height: 16px;
+      font-family: var(--font-family);
+      color: var(--color-a);
       text-transform: uppercase;
       text-indent: 55px;
-      color: var(--color-a);
 
+      background: transparent;
+      border-radius: 12px;
     }
 
     svg {
       position: absolute;
-      left: 13px;
       top: 50%;
+      left: 13px;
+
       transform: translateY(-50%);
     }
   }
@@ -63,28 +67,36 @@ video {
 
 
 .investments-now {
-  border-radius: clamp(18px, 1.709vw, 20px);
-  padding: 34px Min(1.709vw,20px);
-  background: var(--invest-now);
   display: flex;
   flex-direction: column;
+  padding: 34px Min(1.709vw,20px);
+
+  background: var(--invest-now);
+  border-radius: clamp(18px, 1.709vw, 20px);
+
   grid-gap: clamp(16px, 1.88vw, 22px);
+  @include tablet {
+    padding: 34px 20px;
+  }
+  @include mobile {
+    padding-bottom: 60px;
+  }
 
   &__descr {
     display: flex;
     flex-direction: column;
-    grid-gap: 10px;
+
+    font-style: normal;
     // max-width: 160px;
     font-weight: 800;
     font-size: 65px;
     line-height: 65px;
     font-family: var(--font-family);
-    font-style: normal;
-
-    text-transform: uppercase;
     color: var(--color-a);
+    text-transform: uppercase;
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    grid-gap: 10px;
 
     span {
       font-weight: 500;
@@ -106,52 +118,50 @@ video {
     top: -9px;
     right: -2px;
   }
-
-
-  @include tablet {
-    padding: 34px 20px;
-  }
-
-  @include mobile {
-   padding-bottom: 60px;
-  }
-
 }
 
 .investments-active {
-  grid-gap: clamp(16px, 1.88vw, 22px);
+  position: relative;
+
   display: flex;
   flex-direction: column;
   align-items: center;
   height: 100%;
   min-height: var(--card-height);
-  border: 2px solid var(--bg-d);
   padding: 22px Min(1.709vw,20px) 30px;
-  border-radius: clamp(18px, 1.709vw, 20px);
+
   background: var(--invest-active);
-  position: relative;
+  border: 2px solid var(--bg-d);
+  border-radius: clamp(18px, 1.709vw, 20px);
+
+  grid-gap: clamp(16px, 1.88vw, 22px);
+  @include tablet {
+    padding: 22px 20px 30px;
+  }
 
 
   &__vidget {
     position: absolute;
-    left: -2px;
     top: -2px;
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), #A9FF65;
-    box-shadow: inset 0px 4px 4px #ABFC6C;
-    border-radius: 20px 0px;
-    padding: 5px 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    grid-gap: 8px;
+    left: -2px;
 
-    font-family: var(--font-family);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 12px;
+
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
     line-height: 14px;
-
+    font-family: var(--font-family);
     color: var(--color-a);
+
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), #a9ff65;
+    border-radius: 20px 0;
+    box-shadow: inset 0 4px 4px #abfc6c;
+
+    grid-gap: 8px;
 
     svg {
       fill: transparent;
@@ -160,14 +170,16 @@ video {
 
   &__top {
     display: flex;
-    align-items: center;
     flex-direction: column;
+    align-items: center;
+
     grid-gap: 20px;
   }
 
   &__descr {
     display: flex;
     flex-direction: column;
+
     grid-gap: 10px;
   }
 
@@ -175,77 +187,73 @@ video {
     position: relative;
 
     &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
       z-index: -1;
+
       width: 80px;
       height: 60px;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
-      content: '';
-      position: absolute;
+
       background: var(--bg-d);
+      transform: translate(-50%, -50%);
       filter: blur(44.1608px);
     }
   }
 
   &__title {
-    font-family: var(--font-family);
     font-style: normal;
     font-weight: 400;
     font-size: 12px;
     line-height: 12px;
-    text-transform: uppercase;
-    color: var(--color-a);
+    font-family: var(--font-family);
     text-align: center;
+    color: var(--color-a);
+    text-transform: uppercase;
   }
 
   &__value {
     display: flex;
-    align-items: center;
-    grid-gap: 10px;
     justify-content: center;
+    align-items: center;
 
-    font-family: var(--font-family);
     font-style: normal;
     font-weight: 700;
     font-size: clamp(18px, 1.795vw, 21px);
     line-height: 100%;
-    text-transform: uppercase;
-
+    font-family: var(--font-family);
     color: var(--color-a);
+    text-transform: uppercase;
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-
-  }
-
-  @include tablet {
-    padding: 22px 20px 30px;
+    grid-gap: 10px;
   }
 }
 
 
 .investments-default {
-  min-height: var(--card-height);
   display: flex;
-  align-items: center;
-  justify-content: center;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 100%;
-  grid-gap: 20px;
+  min-height: var(--card-height);
+
   background: rgba(130, 71, 229, 0.05);
   border: 2px dashed var(--bg-d);
   border-radius: clamp(18px, 1.709vw, 20px);
 
+  grid-gap: 20px;
+
 
   &__title {
-    font-family: var(--font-family);
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
     line-height: 16px;
-    text-transform: uppercase;
+    font-family: var(--font-family);
     color: var(--color-a);
+    text-transform: uppercase;
   }
 }
-
-

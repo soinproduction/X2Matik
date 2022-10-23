@@ -1,12 +1,15 @@
 .works {
-  padding: clamp(45px, 10.256vw, 120px) 0 clamp(40px, 5.128vw, 60px);
   position: relative;
 
+  padding: clamp(45px, 10.256vw, 120px) 0 clamp(40px, 5.128vw, 60px);
+
   .left-frame-coin {
+    top: 18%;
+    right: 8%;
+
     width: Min(8.268vw, 105px);
     height: Min(7.087vw, 90px);
-    right: 8%;
-    top: 18%;
+
     animation: float 6s linear infinite;
 
     @include tablet {
@@ -15,35 +18,43 @@
   }
 
   .right-frame-coin {
-    width: min(9.449vw, 70px);
-    height: auto;
     bottom: 28%;
     left: 6%;
+
+    width: min(9.449vw, 70px);
+    height: auto;
+
     animation: float 12s linear infinite;
   }
 
 
   &::after {
-    @include round;
     top: 60%;
     left: calc((452px - 84px) * -1);
-    transform: translateY(-50%);
     z-index: -2;
+
+    transform: translateY(-50%);
+
+    @include round;
   }
   &::before {
-    @include round;
     top: 60%;
     right: calc((452px - 84px) * -1);
-    transform: translateY(-50%);
     z-index: -2;
+
+    transform: translateY(-50%);
+
+    @include round;
   }
 
   &__box {
     position: relative;
     z-index: 20;
+
     display: flex;
     flex-direction: column;
     align-items: center;
+
     grid-gap: clamp(30px, 5.128vw, 60px);
 
     .main-top__subtitle {

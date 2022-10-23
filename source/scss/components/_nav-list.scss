@@ -1,41 +1,42 @@
 .nav-list {
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
   width: 100%;
-  grid-gap: 20px 0;
 
+  grid-gap: 20px 0;
   @include tablet {
-    grid-gap: 25px;
     justify-content: initial;
     width: fit-content;
-  }
 
+    grid-gap: 25px;
+  }
   @include small-tablet {
     display: none;
   }
 
   &__link {
-    font-family: var(--font-family);
+    display: flex;
+    align-items: center;
+
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
     line-height: 14px;
+    font-family: var(--font-family);
     color: var(--color-a);
-    display: flex;
-    align-items: center;
+
     grid-gap: 8px;
 
     &--telegram {
       color: var(--color-с);
       svg {
-        transform: translateY(-12%);
         flex-grow: 0;
-        background: linear-gradient(180deg, #41BCE7 0%, #22A6DC 99.64%);
+
+        background: linear-gradient(180deg, #41bce7 0%, #22a6dc 99.64%);
         border-radius: 50%;
+        transform: translateY(-12%);
       }
     }
   }
-
-
 }

@@ -1,53 +1,63 @@
 .referral {
-  padding: clamp(40px, 5.906vw, 75px) 0  clamp(45px, 9.685vw, 123px);
   position: relative;
 
+  padding: clamp(40px, 5.906vw, 75px) 0  clamp(45px, 9.685vw, 123px);
+
   &::after {
-    @include round;
     top: 50%;
     left: calc((452px - 84px) * -1);
-    transform: translateY(-50%);
     z-index: -2;
+
+    transform: translateY(-50%);
+
+    @include round;
   }
   &::before {
-    @include round;
     top: 50%;
     right: calc((452px - 84px) * -1);
-    transform: translateY(-50%);
     z-index: -2;
+
+    transform: translateY(-50%);
+
+    @include round;
   }
 
   .left-frame-coin {
+    bottom: 52%;
+    left: 8%;
+
     width: Min(8.268vw, 105px);
     height: Min(7.087vw, 90px);
-    left: 8%;
-    bottom: 52%;
+
     animation: float 15s linear infinite;
   }
 
   .right-frame-coin {
+    right: 7.5%;
+    bottom: 48%;
+
     width: Min(9.449vw, 120px);
     height: Min(11.732vw, 149px);
-    bottom: 48%;
-    right: 7.5%;
+
     animation: float 19s linear infinite;
 
     @include tablet {
+      right: -1%;
+      bottom: -3%;
+
       width: 95px;
       height: auto;
-      bottom: -3%;
-      right: -1%;
     }
-
-
   }
 
   .bottom-frame-coin {
-    width: 69px;
-    height: 70px;
     bottom: 9%;
     left: 31%;
     z-index: 10;
+
+    width: 69px;
+    height: 70px;
+
     animation: float 6s linear infinite;
 
     @include tablet {
@@ -60,196 +70,204 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+
     grid-gap: clamp(30px, 4.701vw, 55px);
   }
 
   &__inner {
-    width: 100%;
+    position: relative;
+
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
-    grid-gap: clamp(30px, 3.932vw, 36px);
-    background: var(--ref-inner);
-    border-radius: 20px;
+    width: 100%;
     padding: clamp(34px, 3.846vw, 40px) clamp(24px, 2.991vw,35px) clamp(35px, 40px, 40px);
 
-    position: relative;
+    background: var(--ref-inner);
+    border-radius: 20px;
+
+    grid-gap: clamp(30px, 3.932vw, 36px);
 
     &::before {
-      @include round;
-      width: 800px;
-      height: 200px;
       top: 75%;
       left: 50%;
-      transform: translate(-50%, -50%);
       z-index: -2;
+
+      width: 800px;
+      height: 200px;
+
+      transform: translate(-50%, -50%);
+
+      @include round;
     }
   }
 
   &__top {
     display: grid;
-    width: 100%;
-    grid-template-columns: 1fr auto;
     align-items: center;
+    width: 100%;
+
     grid-gap: 13px 20px;
+    grid-template-columns: 1fr auto;
+    @include mobile {
+      grid-template-columns: 100%;
+    }
 
     &-descr {
-      grid-column: 1/ span 2;
-      font-family: var(--font-family);
       font-style: normal;
       font-weight: 400;
       font-size: 16px;
       line-height: 100%;
+      font-family: var(--font-family);
       color: var(--color-a);
 
+      grid-column: 1/ span 2;
       @include mobile {
         display: none;
       }
     }
-
-    @include mobile {
-      grid-template-columns: 100%;
-    }
   }
 
   &__link {
-
     &-wrapper {
-      grid-column: 1;
       position: relative;
 
+      grid-column: 1;
+
       .buffer__input {
-        background: #08040E;
-        border-radius: 16px;
         width: 100%;
-        overflow: hidden;
         height: clamp(56px, 6.154vw, 72px);
-        text-indent: clamp(16px, 3.419vw, 40px);
-        font-family: var(--font-family);
+        overflow: hidden;
+
         font-style: normal;
         font-weight: 400;
         font-size: 18px;
         line-height: 18px;
+        font-family: var(--font-family);
         /* identical to box height */
-
-
         color: var(--color-a);
+        text-indent: clamp(16px, 3.419vw, 40px);
+
+        background: #08040e;
+        border-radius: 16px;
       }
 
       .buffer__button {
-        vertical-align: middle;
-        z-index: 2;
-        top: 50%;
-        transform: translateY(-50%);
         position: absolute;
+        top: 50%;
         right: 4px;
-        height: clamp(56px, 5.556vw, 65px);
-        background: var(--bg-d);
-        border-radius: 16px;
-        display: flex;
-        align-items: center;
-        grid-gap: 10px;
-        justify-content: center;
-        width: clamp(200px, 30.769vw, 360px);
+        z-index: 2;
 
-        font-family: var(--font-family);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: clamp(200px, 30.769vw, 360px);
+        height: clamp(56px, 5.556vw, 65px);
+
         font-style: normal;
         font-weight: 700;
         font-size: clamp(14px, 1.368vw, 16px);
+        font-family: var(--font-family);
+        vertical-align: middle;
+        color: var(--color-a);
         // line-height: 100%;
         text-transform: uppercase;
+        text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 
-        color:  var(--color-a);
+        background: var(--bg-d);
+        border-radius: 16px;
+        transform: translateY(-50%);
 
-        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        transition: all 0.4s;
 
-        transition: all .4s;
-
-        &:hover {
-          box-shadow: 0px 13px 21px rgba(0,0,0, 0.5);
-          background: var(--bg-d);
-        }
-
+        grid-gap: 10px;
         @include laptop {
           width: clamp(200px, 19.769vw, 360px);
         }
-
         @include tablet {
-          font-size: 0;
-          grid-gap: initial;
-          width: clamp(56px, 5.556vw, 65px);
           right: 0;
 
+          width: clamp(56px, 5.556vw, 65px);
+
+          font-size: 0;
+
+          grid-gap: initial;
+
           &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            z-index: 1;
+
             width: 144px;
             height: 56px;
-            background: linear-gradient(270deg, rgba(8, 4, 14, 0) 0%, #08040E 100%);
-            content: '';
-            position: absolute;
-            z-index: 1;
-            left: 0;
+
+            background: linear-gradient(270deg, rgba(8, 4, 14, 0) 0%, #08040e 100%);
             transform: translateX(-100%) matrix(-1, 0, 0, 1, 0, 0);
           }
         }
-      }
 
+        &:hover {
+          background: var(--bg-d);
+          box-shadow: 0 13px 21px rgba(0,0,0, 0.5);
+        }
+      }
     }
   }
 
   &__promo {
-    grid-column: 2;
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: clamp(200px, 23.675vw, 277px);
     height: clamp(56px, 5.556vw, 65px);
-    border: 2px solid var(--bg-d);
-    border-radius: 16px;
-    background-color: transparent;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 
-    font-family: var(--font-family);
     font-style: normal;
     font-weight: 700;
     font-size: clamp(14px, 1.368vw, 16px);
     line-height: 100%;
-    text-transform: uppercase;
-
+    font-family: var(--font-family);
     color: var(--color-a);
+    text-transform: uppercase;
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    background-color: transparent;
+    border: 2px solid var(--bg-d);
+    border-radius: 16px;
 
+    transition: all 0.4s;
+
+    grid-column: 2;
     @include mobile {
-      grid-column: 1;
       width: 100%;
-    }
 
-    transition: all .4s;
+      grid-column: 1;
+    }
     &:hover {
-      box-shadow: 0px 18px 31px rgba(130, 71, 229, 0.25);
       background: var(--bg-d);
+      box-shadow: 0 18px 31px rgba(130, 71, 229, 0.25);
     }
   }
 
   &__button {
     display: flex;
-    align-items: center;
-    grid-gap: 12px;
     justify-content: center;
+    align-items: center;
     margin: clamp(20px, 1.969vw, 25px) auto 0;
 
-    font-family: var(--font-family);
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
     line-height: 100%;
-    text-decoration-line: underline;
+    font-family: var(--font-family);
     color: var(--color-a);
 
+    grid-gap: 12px;
     @include mobile {
       font-size: 18px;
     }
+    text-decoration-line: underline;
 
     svg {
       fill: transparent;
@@ -260,16 +278,13 @@
     position: relative;
 
     &::before {
-      @include wave;
       bottom: -56%;
       z-index: -2;
 
+      @include wave;
       @include tablet {
         bottom: -25vw;
       }
     }
   }
-
-
 }
-
