@@ -1,3 +1,4 @@
+
 const parrent = [...document.querySelectorAll('.buffer')];
 
 function copyFunction(textInput) {

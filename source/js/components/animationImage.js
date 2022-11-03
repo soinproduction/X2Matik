@@ -1,6 +1,5 @@
 import lottie from 'lottie-web';
 
-
 const rightFrame = lottie.loadAnimation({
   container: document.querySelector('.right-frame-svg'),
   renderer: 'svg',
@@ -16,6 +15,7 @@ const leftFrame = lottie.loadAnimation({
   autoplay: true,
   path: '../image-left.json'
 });
+
 
 
 
